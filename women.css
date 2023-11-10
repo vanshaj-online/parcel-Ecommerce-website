@@ -3,27 +3,23 @@
 
 @font-face {
     font-family: cocogoose;
-    src: url(assets/Cocogoose\ Pro-trial.ttf);
+    src: url(assets/fonts/Cocogoose\ Pro-trial.ttf);
 }
 
 @font-face {
     font-family: 'cocogoose light';
-    src: url(assets/Cocogoose\ Pro\ Ultralight-trial.ttf);
+    src: url(assets/fonts/Cocogoose\ Pro\ Ultralight-trial.ttf);
 }
 
-@font-face {
-    font-family: couture;
-    src: url(assets/couture-bld.otf);
-}
 
 @font-face {
     font-family: gilroy;
-    src: url(/FONTS/Gilroy-ExtraBold.otf);
+    src: url(assets/fonts/Gilroy-ExtraBold.otf);
 }
 
 @font-face {
     font-family: gilroy-light;
-    src: url(/FONTS/Gilroy-Light.otf);
+    src: url(assets/fonts/Gilroy-Light.otf);
 }
 
 * {
