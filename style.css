@@ -18,12 +18,12 @@
 
 @font-face {
     font-family: gilroy;
-    src: url(/FONTS/Gilroy-ExtraBold.otf);
+    src: url(assets/fonts/Gilroy-ExtraBold.otf);
 }
 
 @font-face {
     font-family: gilroy-light;
-    src: url(/FONTS/Gilroy-Light.otf);
+    src: url(assets/fonts/Gilroy-Light.otf);
 }
 
 * {
