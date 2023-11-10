@@ -1,0 +1,226 @@
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/casualshirt1.avif"
+                alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">SKETCH & CO.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual shirt</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/casualshirt2.avif" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">SKETCH & CO.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual shirt</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/casualshirt3.avif" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">SKETCH & CO.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual shirt</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/casualshirt4.avif" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">SKETCH & CO.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual shirt</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <img src="/Projects/Ecommerce website/assets/casualtshirt1.avif" alt="">
+        </div>
+        <div class="brand">
+            <span><a href="">NICKK</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual tshirt</a></span>
+            <span>Rs. 299</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <img src="/Projects/Ecommerce website/assets/casualtshirt2.webp" alt="">
+        </div>
+        <div class="brand">
+            <span><a href="">NICKK</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual tshirt</a></span>
+            <span>Rs. 299</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <img src="/Projects/Ecommerce website/assets/casualtshirt3.avif" alt="">
+        </div>
+        <div class="brand">
+            <span><a href="">NICKK</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual tshirt</a></span>
+            <span>Rs. 299</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <img src="/Projects/Ecommerce website/assets/casualtshirt4.avif" alt="">
+        </div>
+        <div class="brand">
+            <span><a href="">NICKK</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's casual tshirt</a></span>
+            <span>Rs. 299</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket1.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket2.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket3.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket4.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket5.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket6.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket7.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>
+<div class="shop-card">
+    <div class="item">
+        <div class="photo">
+            <a href=""><img src="/Projects/Ecommerce website/assets/jacket8.jpg" alt=""></a>
+        </div>
+        <div class="brand">
+            <span><a href="">caizo c.</a></span>
+        </div>
+        <div class="title-price">
+            <span><a href="">men's winter stylish jacket</a></span>
+            <span>Rs. 599</span>
+        </div>
+    </div>
+</div>

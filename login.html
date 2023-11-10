@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="webiste icon" href="assets/logo.jpg" type="image/jpg">
+    <script src="login.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img loading="lazy" src="assets/logo.svg" alt=""></a>
+            </div>
+            <div class="center-nav">
+                <li>
+                    <ul class="hover">
+                        <a href="men.html">Men</a>
+                        <li class="drop-down ">
+                            <ul><a href="men-section/menwear.html">Topwear</a></ul>
+                            <ul><a href="">bottomwear</a></ul>
+                            <ul><a href="">Eyewear</a></ul>
+                            <ul><a href="">Footwear</a></ul>
+                            <ul><a href="">bags</a></ul>
+                        </li>
+                    </ul>
+                    <ul class="hover ">
+                        <a href="women.html">women</a>
+                        <li class="drop-down ">
+                            <ul><a href="">Topwear</a></ul>
+                            <ul><a href="">bottomwear</a></ul>
+                            <ul><a href="">Eyewear</a></ul>
+                            <ul><a href="">Footwear</a></ul>
+                            <ul><a href="">bags</a></ul>
+                        </li>
+                    </ul>
+                    <ul class="hover ">
+                        <a href="">accessories</a>
+                        <li class="drop-down ">
+                            <ul><a href="">bottom</a></ul>
+                            <ul><a href="">bottom</a></ul>
+                            <ul><a href="">bottom</a></ul>
+                            <ul><a href="">upper</a></ul>
+                            <ul><a href="">upper</a></ul>
+                        </li>
+                    </ul>
+                    <ul class="hover ">
+                        <a href="">Winter</a>
+                        <li class="drop-down ">
+                            <ul><a href="">bottom</a></ul>
+                            <ul><a href="">bottom</a></ul>
+                            <ul><a href="">bottom</a></ul>
+                            <ul><a href="">upper</a></ul>
+                            <ul><a href="">upper</a></ul>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <div class="right-nav">
+                <input type="text" placeholder="search PARCEL">
+                <button type="submit"><img loading="lazy" src="assets/search.svg" alt="search button"></button>
+            </div>
+            <div class="cart">
+                <div id="profile">
+                    <a href="login.html" target="_blank" class="profile"><img loading="lazy" src="assets/login.svg"
+                            alt="">profile</a>
+                    <li data-profile class="hvr ">
+                        <ul><a href="">login/signup</a></ul>
+                        <ul><a href="">orders</a></ul>
+                        <ul><a href="">contact us</a></ul>
+                        <ul><a href="">profile</a></ul>
+                        <ul><a href="">profile</a></ul>
+                    </li>
+                </div>
+                <a href="" target="_blank"><img loading="lazy" src="assets/cart.svg" alt="cart">cart</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            <div class="left">
+                <img src="assets/delivery.svg" alt="">
+            </div>
+            <div class="right">
+                <div class="border">
+                    <div class="form">
+                        <!-- login form -->
+                            <div class="login " id="login">
+                                <form action="">
+                                    <div class="logo">Welcome to<span>PARCEL</span></div>
+                                    <input type="tel" placeholder="Phone" required>
+                                    <input type="password" placeholder="Password" required>
+                                    <div id="forget"><a href="">forget password?</a></div>
+                                    <button type="submit">Login</button>
+                                    <div id="new">
+                                        <span>new customer? <a href="#" id="newbtn">create account</a> </span>
+                                    </div>
+                                </form>
+                            </div>
+                        <!-- login form -->
+                        <!-- signup form -->
+                        <div class="signup" id="signup">
+                            <form action="index.html">
+                                <div class="logo">Welcome to<span>PARCEL</span></div>
+                                <div>
+                                    <input type="text" placeholder="First name"><input type="text" placeholder="Last name">
+                                </div>
+                                <input type="email" placeholder="email iD">
+                                <input type="tel" placeholder="Phone">
+                                <input type="password" placeholder="Password">
+                                <button>
+                                    Sign up
+                                    <div class="arrow-wrapper">
+                                        <div class="arrow"></div>
+                        
+                                    </div>
+                                </button>
+                                <div><span>existing user?<a href="#" id="return"> login</a></span></div>
+                            </form>
+                        </div>
+                        <!-- signup form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

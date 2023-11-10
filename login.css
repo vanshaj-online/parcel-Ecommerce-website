@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@font-face {
+    font-family: gilroy-light;
+    src: url(/FONTS/Gilroy-Light.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy-light, sans-serif;
+    -webkit-user-drag: none;
+}
+
+*::selection{
+    background-color: transparent;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+/* nav section */
+
+header,
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 9;
+    box-shadow: 0 1px 11px -8px grey;
+}
+
+nav * {
+    font-size: 1.1vmax;
+}
+
+header nav>div {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    background-color: white;
+}
+
+.right-nav,
+.logo {
+    width: 25%;
+    justify-content: center;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo a {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.logo a img {
+    height: 8vmax;
+}
+
+.center-nav {
+    width: 30%;
+}
+
+.center-nav>li {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: capitalize;
+    height: 100%;
+}
+
+.center-nav>li>ul:last-child {
+    position: relative;
+    text-transform: capitalize;
+}
+
+.center-nav>li>ul:last-child>a::before {
+    position: absolute;
+    content: 'new';
+    top: -1.5vh;
+    color: orangered;
+    font-weight: 900;
+    font-size: .8vw;
+    border-radius: 8px;
+    text-transform: capitalize;
+    padding: .5vh;
+    left: 100%;
+}
+
+.center-nav>li>ul>a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    transition: .1s;
+    height: 100%;
+}
+
+
+.center-nav>li>ul>a:hover {
+    color: #639fa5;
+}
+
+.center-nav>li>ul:first-child>a {
+    color: #639fa5;
+}
+
+.center-nav>li>ul {
+    position: relative;
+    height: 100%;
+    line-height: 10vh;
+}
+
+.center-nav>li>ul .drop-down {
+    position: absolute;
+    top: 100%;
+    width: 15vw;
+    line-height: 2.5;
+    padding: 2vh;
+    background-color: whitesmoke;
+    border-radius: 0 0 10px 10px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 6px -9px rgba(128, 128, 128, 0.428) inset;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+
+
+.drop-down ul a {
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: grey;
+    font-weight: 900;
+    transition: .1s linear;
+}
+
+.drop-down ul a:hover {
+    color: #74bac0;
+}
+
+.center-nav>li>.show>.drop-down {
+    visibility: visible;
+    top: 100%;
+    opacity: 1;
+}
+
+.right-nav input,
+.right-nav button {
+    outline: none;
+    border: none;
+    padding: 0 2vh;
+    height: 50%;
+    border-radius: 7px 0 0 7px;
+    font-weight: 900;
+    font-family: "Poppins";
+    width: 60%;
+    box-shadow: 0px 0px 8px -1px rgba(145, 145, 145, 0.398);
+    font-weight: 500;
+}
+
+.right-nav button {
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    width: 6vh;
+    padding: 0;
+    background-color: rgb(212, 211, 211);
+}
+
+.right-nav button img {
+    height: 3vh;
+    width: 3vh;
+}
+
+.cart {
+    width: 8%;
+    justify-content: space-between;
+}
+
+.cart a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: 600;
+    color: #000;
+}
+
+.cart a img {
+    height: 1.7vw;
+    color: rgb(152, 152, 152);
+}
+
+.cart #profile {
+    position: relative;
+    height: 100%;
+}
+
+.cart #profile>a {
+    height: 100%;
+}
+
+.cart #profile li {
+    position: absolute;
+    top: 10vh;
+    width: 12vw;
+    list-style-type: none;
+    padding: 1vh 0;
+    backdrop-filter: blur(12px);
+    line-height: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: rgba(126, 126, 126, 0.75);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cart #profile li:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart #profile .active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart #profile li ul {
+    line-height: 2;
+    display: flex;
+    padding: 0 2vh;
+    justify-content: left;
+    margin-bottom: 5px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.cart #profile li ul:first-child a {
+    padding: 0 2vh;
+    background-color: #74bac0;
+    color: white;
+    border: 2px solid #74bac0;
+    border-radius: 5px;
+    width: 100%;
+    transition: .1s linear;
+}
+
+.cart #profile li ul:hover {
+    background-color: #74bac0;
+}
+
+.cart #profile li ul:hover>a {
+    color: white;
+}
+
+.cart #profile li ul:first-child {
+    background-color: transparent;
+}
+
+.cart #profile li ul:first-child a:hover {
+    background-color: rgb(254, 254, 254);
+    border: 2px solid #74bac0;
+    color: #74bac0;
+}
+
+.cart #profile li ul a {
+    color: #fff;
+    width: max-content;
+    transition: .05s linear;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    font-size: 1.1vw;
+}
+
+
+/* nav section */
+
+/* image section */
+main {
+    width: 100%;
+}
+
+.main {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+
+.right,
+.left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* image section */
+.right > .border{
+    height: 36vw;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+}
+
+.right .border::before{
+    position: absolute;
+    content: "";
+    height: 95%;
+    width: 93%;
+    background-color: rgba(65, 105, 225, 0.428);
+    /* z-index: -2; */
+    top: 0;
+    left: 0;
+}
+.right .border::after{
+    position: absolute;
+    content: "";
+    height: 95%;
+    width: 93%;
+    z-index: 1;
+    background-color: royalblue;
+    bottom: 0;
+    right: 0;
+}
+
+.right .form{
+    height: 96%;
+    width: 95%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Login form */
+
+.form>.login{
+    top: -0%;
+}
+
+.form>.login, .form>.signup {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    transition: .35s linear;
+}
+
+.form .animate-2{
+    top: -100%;
+}
+
+.login>form {
+    height: 100%;
+    width: 100%;
+    padding: 4vh 2vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: whitesmoke;
+    border-radius: 0px;
+        box-shadow: 12px 12px 0px royalblue,
+            -12px -12px 0px rgba(65, 105, 225, 0.608);
+}
+
+.login > form > *{
+    margin-bottom: 3.5vh;
+}
+
+.form .logo {
+    font-family: 'Satisfy', cursive;
+    font-size: 2vw;
+    text-align: justify;
+    align-items: center;
+    color: royalblue;
+    font-weight: 100;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.form .logo span {
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-family: 'Righteous', sans-serif;
+    background-color: royalblue;
+    color: white;
+    padding: 0 .6vh;
+}
+
+.login>form>input {
+    width: 70%;
+    height: max-content;
+    font-size: 1.1vw;
+    font-family: "Poppins";
+    padding: .2vh 1vh;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: rgb(1, 1, 108);
+    border: none;
+    border-bottom: 2px solid rgba(65, 105, 225, 0.608);
+}
+
+.login>form>#forget {
+    display: flex;
+    width: 70%;
+    height: 2vh;
+    justify-content: right;
+}
+
+.login>form>#forget a {
+    text-decoration: none;
+    font-family: "Poppins";
+    color: rgb(91, 132, 255);
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+form button {
+    width: 20%;
+    padding: 1vh 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Poppins";
+    font-weight: 900;
+    overflow: hidden;
+    background-color: royalblue;
+    position: relative;
+    transition: .1s linear;
+}
+
+form button:hover {
+    background-color: rgb(42, 89, 230);
+}
+
+#new{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+#new span{
+    text-transform: capitalize;
+    font-family: "Poppins";
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+#new span a{
+    text-decoration: none;
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: rgb(91, 132, 255);
+}
+
+.login > form>input::placeholder {
+    color: rgba(65, 105, 225, 0.509);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+/* login form */
+
+/* signup form */
+
+.signup{
+    top: 100%;
+    position: absolute;
+    background-color: whitesmoke;
+}
+
+.animate{
+    top:0;
+}
+
+.signup>form{
+    height: 100%;
+    padding: 0 2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.signup>form>*{
+    width: 70%;
+    margin-bottom: 3vh;
+}
+
+
+.signup>form>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+.signup>form>div:nth-child(2) input{
+    width: 47%;
+}
+
+.signup input::placeholder{
+    color: rgba(65, 105, 225, 0.651);
+    text-transform: capitalize;
+}
+
+.signup form input{
+    height: 4vh;
+    border: none;
+    padding: 1vh;
+    border-bottom: 2px solid rgba(65, 105, 225, 0.669);
+    background-color: transparent;
+    font-size: 1.1vw;
+    font-weight: 600;
+    outline: none;
+}
+
+.signup form select{
+    outline: none;
+    color: white;
+    background-color: rgba(65, 105, 225, 0.869);
+    padding: 1vh;
+    border-radius: 5px;
+    width: max-content;
+    text-transform: capitalize;
+    font-size: 1.1vw;
+    font-weight: 600;
+    border: none;
+}
+.signup form select option{
+    color: royalblue;
+    background-color: whitesmoke;
+    height: 3vh;
+    font-weight: 600;
+    font-size: 1.1vw;
+}
+
+.signup>form>div:nth-child(6){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.signup form label {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: rgba(65, 105, 225, 0.869);
+}
+
+
+.signup button {
+    --primary-color: royalblue;
+    --secondary-color: #fff;
+    --hover-color: rgb(13, 67, 227);
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    width: 35%;
+    border: 0;    
+    height: 2.7rem;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    /* padding: 1em 1.8em; */
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+    font-weight: bold;
+    font-size: 1.1vw;
+    white-space: nowrap;
+}
+
+.signup button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+.signup button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+.signup button:hover {
+    background-color: var(--hover-color);
+}
+
+.signup button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+.signup button:hover .arrow:before {
+    right: 0;
+}
+
+.signup form>div:last-child{
+    display: flex;
+    justify-content: center;
+}
+.signup form>div:last-child span{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.signup form>div:last-child a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(0, 132, 255);
+    font-weight: 600;
+}
+/* signup form */
