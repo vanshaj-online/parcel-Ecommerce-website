@@ -30,7 +30,7 @@ function dropdownprofile() {
 dropdownprofile()
 
 function filterProduct() {
-    let products = document.querySelectorAll('.shop-card');
+    var products = document.querySelectorAll('.shop-card');
     let btns = document.querySelectorAll('.filter > span');
 
     function changeColor(){
@@ -97,47 +97,93 @@ function filterProduct() {
             }
         })
     }
+    function lowPrice() {
+        products.forEach((e) =>{
+            let p = e.querySelector('#price').innerHTML;
+            let arr = p.split(" ")
+            let price = Number(arr[arr.length - 1]);
+            if(price > 500){
+                e.classList.add('hidden')
+            } 
+        })
+        
+    }
+    function midPrice() {
+        products.forEach((e) =>{
+            let p = e.querySelector('#price').innerHTML;
+            let arr = p.split(" ")
+            let price = Number(arr[arr.length - 1]);
+            if (price > 1000){
+                e.classList.add('hidden')
+                console.log(e)
+            } 
+        })
+        
+    }
+    function highPrice() {
+        products.forEach((e) =>{
+            let p = e.querySelector('#price').innerHTML;
+            let arr = p.split(" ")
+            let price = Number(arr[arr.length - 1]);
+            if (price > 1500) {
+                e.classList.add('hidden')
+                console.log(e)
+            }        
+        })
+    }
+    
+ 
 
     document.querySelector('#all').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        filter = 'all';
     })
     document.querySelector('#tshirt').addEventListener('click', function () {
         removeHidden()
         changeColor()
         tshirtFilter()
-        filter = 'tshirt'
     })
     document.querySelector('#shirt').addEventListener('click', function () {
         removeHidden()
         changeColor()
         shirtFilter()
-        filter = 'shirt'
     })
     document.querySelector('#jacket').addEventListener('click', function () {
         removeHidden()
         changeColor()
         jacketFilter()
-        filter = 'jacket'
     })
     document.querySelector('#jeans').addEventListener('click', function () {
         removeHidden()
         changeColor()
         bottomwearFilter()
-        filter = 'jeans'
     })
     document.querySelector('#shoes').addEventListener('click', function () {
         removeHidden()
         changeColor()
         shoesFilter()
-        filter = 'shoes'
     })
     document.querySelector('#accessories').addEventListener('click', function () {
         removeHidden()
         changeColor()
         accessoriesFilter()
-        filter = 'accessories'
+    })
+    document.querySelector('#low').addEventListener('click',function(){
+        removeHidden()
+        changeColor()
+        lowPrice()
+    })
+    document.querySelector('#mid').addEventListener('click',function(){
+        removeHidden()
+        changeColor()
+        midPrice()
+    })
+    document.querySelector('#high').addEventListener('click',function(){
+        removeHidden()
+        changeColor()
+        highPrice()
+        
     })
 }
 filterProduct()
+
