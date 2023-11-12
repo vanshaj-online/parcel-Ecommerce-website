@@ -1,12 +1,11 @@
+var imgDivs = document.querySelectorAll('.item');
 function addDataSrc(){
-    let imgDivs = document.querySelectorAll('.item > a');
     imgDivs.forEach((e) =>{
-        let allImg = e.querySelectorAll('img');
-        allImg.forEach(img =>{
-            let attr = img.getAttribute('src').slice(6)
-            img.setAttribute('data-src',`assets/lazyloads${attr}`)
-        })
+        let imgDivs = e.querySelector('img')
+        let src = imgDivs.getAttribute('src').slice(6)
+        e.style.background = `url(assets/lazyloads${src})`
     })
+   
 }
 addDataSrc()
 
@@ -49,3 +48,15 @@ function dropdownprofile(){
     })
 }
 dropdownprofile()
+
+function lazyload(){
+    imgDivs.forEach(eachItem =>{
+        function loaded(){eachItem.classList.add('loaded')}
+        let img = eachItem.querySelector('img');
+        if(img.complete){
+            loaded()
+        }
+        img.addEventListener('load',loaded())
+    })
+}
+lazyload()

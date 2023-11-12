@@ -745,24 +745,24 @@ main > *{
     justify-content: space-between;
 }
 
-.item {
+.item{
     width: 16vw;
     height: 18.9vw;
-    background-color: #3b757a;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
     transition: .1s;
+    background-position: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
-.item a {
+.item>a {
     height: 100%;
-    width: initial;
+    width: 100%;
     color: white;
     display: flex;
-    position: relative;
-    background-position: center;
-    background-size: cover;
+    position: relative;   
 }
 
 .item:hover {
@@ -805,6 +805,11 @@ main > *{
     width: 100%;
     object-fit: cover;
     object-position: center;
+    opacity: 0;
+}
+
+.item.loaded > a > img{
+    opacity: 1;
 }
 
 .section-4{
