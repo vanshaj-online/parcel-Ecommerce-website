@@ -1,21 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
-
-@font-face {
-    font-family: cocogoose;
-    src: url(assets/fonts/Cocogoose\ Pro-trial.ttf);
-}
-
-@font-face {
-    font-family: 'cocogoose light';
-    src: url(assets/fonts/Cocogoose\ Pro\ Ultralight-trial.ttf);
-}
-
-
-@font-face {
-    font-family: gilroy;
-    src: url(assets/fonts/Gilroy-ExtraBold.otf);
-}
 
 @font-face {
     font-family: gilroy-light;
@@ -26,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: gilroy-light, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 10px;
 }
 
@@ -35,12 +18,16 @@
     background-color: #639fa5;
 }
 
-*:focus{
+*:focus {
     outline: none;
 }
 
-img::selection{
+img::selection {
     background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 html,
@@ -50,7 +37,7 @@ body {
     background-color: white;
 }
 
-img{
+img {
     -webkit-user-drag: none;
 }
 
@@ -69,6 +56,7 @@ nav {
 
 nav * {
     font-size: 1.1vmax;
+    font-family: gilroy-light,sans-serif;
 }
 
 header nav>div {
@@ -148,10 +136,6 @@ nav {
     color: #639fa5;
 }
 
-.center-nav>li>ul:first-child>a{
-    color: #639fa5;
-}
-
 .center-nav>li>ul {
     position: relative;
     height: 100%;
@@ -161,16 +145,16 @@ nav {
 .center-nav>li>ul .drop-down {
     position: absolute;
     top: 100%;
-    width: 15vw;
+    width: 12vw;
     line-height: 2.5;
-    padding: 2vh;
+    padding: 2vh 3vh;
     background-color: whitesmoke;
     border-radius: 0 0 10px 10px;
     left: 50%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 6px -9px rgba(128, 128, 128, 0.428) inset;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     transform: translateX(-50%);
     list-style: none;
@@ -180,15 +164,16 @@ nav {
 }
 
 
-.drop-down ul a {
+.drop-down ul span {
     text-decoration: none;
     font-size: 1.2vw;
     color: grey;
     font-weight: 900;
+    cursor: pointer;
     transition: .1s linear;
 }
 
-.drop-down ul a:hover {
+.drop-down ul span:hover {
     color: #74bac0;
 }
 
@@ -238,6 +223,7 @@ nav {
     align-items: center;
     font-size: 1vw;
     font-weight: 600;
+    height: 100%;
     color: #000;
 }
 
@@ -251,9 +237,6 @@ nav {
     height: 100%;
 }
 
-.cart #profile>a{
-    height: 100%;
-}
 
 .cart #profile li {
     position: absolute;
@@ -334,158 +317,191 @@ nav {
 }
 
 /* nav ends */
+/* main section */
 
-main,#main{
+main{
     width: 100%;
-    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
 }
 
-#main{
-    min-height: 88vh;
+
+.main{
+    width: 100%;
+    display: flex;
+    padding: 5vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.main>*{
+    margin-bottom: 3.5vw;
+}
+
+.shop{
+    width: 100%;
+    justify-content: center;
+    height: max-content;
+    display: flex;
+}
+
+.shop h1{
+    font-size: 3vw;
+    color: rgb(142, 142, 142);
+    text-transform: capitalize;
+}
+
+.filter{
+    width: 95%;
+    padding: 0 1vh;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filter>span{
+    margin-right: 2rem;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    cursor: pointer;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
+    color: #888;
+    font-weight: 600;
+    transition: .2s linear;
 }
 
-.deals{
-    width: 90%;
-    min-height: 100vh;
+
+.filter>span:hover{
+    color: #639fa5;
+}
+
+.filter>h3{
+    font-size: 1.5vw;
+    height: 100%;
+    color: #444;
+    margin-right: 2rem;
+    text-transform: capitalize;
+}
+.container{
+    height: auto;
+    overflow-x: hidden;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.heading{
-    white-space: nowrap;
-    width: 100%;
-    height: max-content;
-    margin: 5vh 0;
-    display: flex;    
+.shop-card{
+    display: flex;  
+    height: 35rem;
+    width: 22rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh;
+    transition: .1s linear;
+    border: .01px solid rgb(201, 201, 201);
+    transition: all .1s linear;
+}
+.shop-card:hover{
+    box-shadow: 0 0 12px -5px grey;
+    transform: scale(1.01);
 }
 
-.heading h1{
-    text-transform: capitalize;
-    font-family: couture,sans-serif ;
-    font-size: 2vw;
-    font-weight: 500;
-    width: 100%;
-    color: rgb(135, 135, 135);
-    letter-spacing: 1px;
+.container .hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.product{
-    height: 30vw;
-    width: 23%;
-    border-radius: 5px;
-    background-color: rgb(246, 246, 255);
-    margin-bottom: 5vh;
-    overflow: hidden;
-    transition: .2s ease;
-}
-
-.product a{
+.item{
     height: 100%;
     width: 100%;
-    display: inline-flex;
-    text-decoration: none;
-    text-align: center;
+    justify-content: space-between;
     align-items: center;
+    display: flex;
+    padding-bottom: 1vh;
     flex-direction: column;
-    justify-content: space-evenly;
 }
-.product:hover{
-    box-shadow: 0 0 12px -6px rgba(122, 122, 122);
+
+.item .photo{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
-.product a img{
+.item .photo a{
+    height: 100%;
+    width: 100%;
+}
+
+.wallets .item .photo{
+    padding: 0 2vh;
+}
+.wallets .item .photo img, .goggles .item #goggles img{
+    object-fit: contain;
+    object-position: center;
+}
+
+.item .photo img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: top;
 }
 
-.by-category{
+.title-price, .brand{
     width: 100%;
-    min-height: 60vh;
-}
-
-.txt{
-    height: max-content;
-    width: 100%;
-    margin: 3vh 0;
-    display: grid;
-    place-content: center;
-}
-.txt h1{
-    font-size: 2.5vw;
-    text-transform: capitalize;
-    color: rgb(154, 154, 154);
-    letter-spacing: 2px;
-    font-weight: 900;
-    font-family: couture;
-    margin: 0;
-    padding: 0;
-}
-
-.categories{
-    height: 22vw;
-    width: 100%;
-    background-color: rgb(232, 249, 255);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.cat-prod{
-    height: 19vw;
-    width: 19vw;
-    display: flex;
-    align-items: center;
+    padding: 0 1vh;
+    height: fit-content;
+    justify-content: space-between;
     flex-direction: column;
+    display: flex;
+}
+.title-price span,
+.brand span{
+    font-size: 1.2vw;
+    align-items: flex-start;
+    text-transform: capitalize;
+    /* white-space: nowrap; */
+    height: auto;
+    font-weight: 600;
+    width: 100%;
     overflow: hidden;
-    justify-content: space-around;
-
-}
-
-.cat-prod a{
-    height: 100%;
-    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+}
+
+.title-price > span:last-of-type{
+    font-size: 1vw;
+}
+
+.title-price span a,
+.brand span a{
+    font-size: 1vw;
     text-decoration: none;
-}
-.cat-prod a img{
-    height: 80%;
-    width: 80%;
-    object-position: center;
-    object-fit: cover;
-    border-radius: 100%;
-    padding: .8vh;
-    background: linear-gradient(to top right, rgb(251, 116, 67), rgb(249, 249, 67) 80%);
-    transition: .2s;
-}
-.cat-prod a img:hover{
-    box-shadow: -1px -1px 10px -2px #9d9d9d;
-}
-.cat-prod a span{
-    color: #444;
-    font-family: 'gilroy light', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 900;
+    font-weight: 500;
+    color: #555;
+    width: max-content;
     text-transform: capitalize;
-    font-size: 1.4vw;
-    transition: .1s linear;
 }
 
-.cat-prod a:hover > span{
-    color: rgb(255, 137, 18);
+.brand span a{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    color: black;
+    font-size: 1.2vw;
 }
-
+/* main section */
 /* footer section */
-
 footer {
     height: max-content;
     padding: 2vw 7vw;
@@ -496,11 +512,12 @@ footer {
     justify-content: space-around;
 }
 
-footer *{
+footer * {
     font-family: "Poppins", sans-serif;
 }
 
-.online-shop, .policy {
+.online-shop,
+.policy {
     min-height: 80%;
     width: fit-content;
     display: flex;
@@ -508,7 +525,7 @@ footer *{
     flex-direction: column;
 }
 
-footer>div>div{
+footer>div>div {
     margin-bottom: 1.5vh;
 }
 
@@ -521,86 +538,96 @@ footer>div>div a {
     text-transform: capitalize;
 }
 
-footer>div>div:first-child a b,footer>div>div:first-child h6 b,footer>div> div:first-child, #return h6 b{
+footer>div>div:first-child a b,
+footer>div>div:first-child h6 b,
+footer>div>div:first-child,
+#return h6 b {
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     font-size: 1.1vw;
     color: #222;
     font-weight: 900;
 }
-footer>div> div:first-child{
+
+footer>div>div:first-child {
     margin-bottom: 2vh;
 }
 
-.playstore, .original{
+.playstore,
+.original {
     width: 25%;
     min-height: 20vh;
 }
 
-#playstore a, #appstore a{
+#playstore a,
+#appstore a {
     overflow: hidden;
     border-radius: 8px;
     display: grid;
     place-content: center;
 }
 
-#appstore a img{
+#appstore a img {
     width: 8vw;
 }
-.playstore div{
+
+.playstore div {
     display: inline-block;
     font-weight: bold;
 }
-#playstore a img{
+
+#playstore a img {
     width: 9vw;
 }
 
-.original>div img{
+.original>div img {
     height: 3rem;
     margin-right: 1vh;
 }
 
-#return img{
+#return img {
     margin-right: 1vh;
     height: 3.3rem;
 }
 
-.original div{
+.original div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#original h6, #return h6{
+#original h6,
+#return h6 {
     color: #222;
     text-transform: uppercase;
 }
 
-#original h6 span, #return h6 span{
+#original h6 span,
+#return h6 span {
     text-transform: lowercase;
     color: #858585;
     font-weight: 100;
     font-size: 1.1vw;
 }
 
-.social{
+.social {
     width: 70%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
 }
 
-.social div h4{
+.social div h4 {
     font-size: 1.1vw;
 }
 
-.social div:last-child{
+.social div:last-child {
     width: 100%;
     height: 60%;
     display: flex;
 }
 
-.social div:last-child a{
+.social div:last-child a {
     width: fit-content;
     height: 100%;
     display: inline-block;
@@ -610,11 +637,10 @@ footer>div> div:first-child{
     margin-right: .5vh;
 }
 
-.social div:last-child a img{
+.social div:last-child a img {
     height: 1.8vw;
     object-fit: contain;
     object-position: center;
 }
-
 
 /* footer section */

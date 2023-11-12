@@ -1,3 +1,15 @@
+function addDataSrc(){
+    let imgDivs = document.querySelectorAll('.item > a');
+    imgDivs.forEach((e) =>{
+        let allImg = e.querySelectorAll('img');
+        allImg.forEach(img =>{
+            let attr = img.getAttribute('src').slice(6)
+            img.setAttribute('data-src',`assets/lazyloads${attr}`)
+        })
+    })
+}
+addDataSrc()
+
 function dropdown(){
     var hovers = document.querySelectorAll('.hover');
     var main = document.querySelector('.hero')
