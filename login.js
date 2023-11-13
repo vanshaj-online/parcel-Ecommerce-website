@@ -53,3 +53,16 @@ function loginToSignup(){
     })
 }
 loginToSignup()
+
+function loginMsg(){
+    let num = document.querySelector("#no");
+    let pwd = document.querySelector("#pwd");
+    if(num.value.length > 0 && pwd.value.length > 0){
+        setTimeout(()=>{
+            alert('Logged In Succesfully')
+        },0)
+    }
+    else{
+        alert('please fill required input fields!')
+    }
+}

@@ -381,7 +381,7 @@ main > *{
     letter-spacing: -0.1px;
     font-family: "cocogoose light";
     font-weight: 900;
-    color: grey;
+    color: #333;
 }
 
 #text h1 {
@@ -766,7 +766,8 @@ main > *{
 }
 
 .item:hover {
-    box-shadow: 0 0 8px -2px grey;
+    box-shadow: 0 0 12px -2px #999;
+    transform: scale(1.01);
 }
 
 .item a h3 {
