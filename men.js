@@ -98,6 +98,7 @@ function init(){
             products.forEach(elem => {
                 if (!elem.classList.contains('bags')) {
                     elem.classList.add('hidden')
+                    console.log('bags function ran successfully')
                 }
             })
         }
@@ -176,6 +177,7 @@ function init(){
             removeHidden()
             changeColor()
             bagsFilter()
+            console.log('bags button clicked successfully')
         })
         document.querySelector('#accessories').addEventListener('click', function () {
             removeHidden()
@@ -325,7 +327,7 @@ function init(){
                 footer.style.filter = 'blur(0)'
             }, 1000)
         })
-        document.querySelector('#bags').addEventListener('click', function () {
+        document.querySelector('#bag').addEventListener('click', function () {
             hovers.forEach(elem => {
                 elem.classList.remove('show')
             })
