@@ -381,7 +381,7 @@ main > *{
     letter-spacing: -0.1px;
     font-family: "cocogoose light";
     font-weight: 900;
-    color: grey;
+    color: #333;
 }
 
 #text h1 {
@@ -745,28 +745,29 @@ main > *{
     justify-content: space-between;
 }
 
-.item {
+.item{
     width: 16vw;
     height: 18.9vw;
-    background-color: #3b757a;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
     transition: .1s;
+    background-position: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 
-.item a {
+.item>a {
     height: 100%;
-    width: initial;
+    width: 100%;
     color: white;
     display: flex;
-    position: relative;
-    background-position: center;
-    background-size: cover;
+    position: relative;   
 }
 
 .item:hover {
-    box-shadow: 0 0 8px -2px grey;
+    box-shadow: 0 0 12px -2px #999;
+    transform: scale(1.01);
 }
 
 .item a h3 {
@@ -805,6 +806,11 @@ main > *{
     width: 100%;
     object-fit: cover;
     object-position: center;
+    opacity: 0;
+}
+
+.item.loaded > a > img{
+    opacity: 1;
 }
 
 .section-4{
