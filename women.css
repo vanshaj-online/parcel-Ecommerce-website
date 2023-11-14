@@ -219,6 +219,9 @@ nav {
     width: 6vh;
     padding: 0;
     background-color: rgb(212, 211, 211);
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 .right-nav button img {
