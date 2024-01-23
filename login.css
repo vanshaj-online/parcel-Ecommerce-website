@@ -26,6 +26,7 @@ body {
     background-color: white;
 }
 
+
 /* nav section */
 
 header,
@@ -136,7 +137,7 @@ nav {
     width: 15vw;
     line-height: 2.5;
     padding: 2vh;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 0 0 10px 10px;
     left: 50%;
     display: flex;
@@ -148,7 +149,7 @@ nav {
     list-style: none;
     visibility: hidden;
     opacity: 0;
-    transition: .2s;
+    transition: .2s linear;
 }
 
 
@@ -314,6 +315,7 @@ nav {
 /* image section */
 main {
     width: 100%;
+    transition: .5s linear;
 }
 
 .main {
@@ -511,6 +513,19 @@ form button:hover {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
+.login .warn{
+    color: red;
+    display: none;
+    opacity: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.159);
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .2s linear;
+}
 /* login form */
 
 /* signup form */
@@ -662,18 +677,20 @@ form button:hover {
     right: 0;
 }
 
-.signup form>div:last-child{
+.signup >form>div:last-of-type{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.signup form>div:last-child span{
+.signup form>div:last-of-type>span{
     text-transform: capitalize;
     font-weight: 600;
 }
-.signup form>div:last-child a{
+.signup form>div:last-of-type a{
     text-decoration: none;
     text-transform: capitalize;
     color: rgb(0, 132, 255);
     font-weight: 600;
 }
+
 /* signup form */

@@ -36,7 +36,7 @@ body {
     width: 100%;
     background-color: white;
 }
-body{position: relative;}
+body{position: relative;transition: filter .2s linear,background .2s linear}
 img {
     -webkit-user-drag: none;
 }
@@ -148,7 +148,7 @@ nav {
     width: 12vw;
     line-height: 2.5;
     padding: 2vh 3vh;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 0 0 10px 10px;
     left: 50%;
     display: flex;

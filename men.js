@@ -14,13 +14,15 @@ function init(){
         hovers.forEach(elem => {
             elem.addEventListener('mousemove', function () {
                 elem.classList.add('show')
-                main.style.filter = 'blur(2px)'
-                footer.style.filter = 'blur(2px)'
+                main.style.filter = 'blur(5px)'
+                footer.style.filter = 'blur(5px)'
+                document.querySelector('body').style.background = 'whitesmoke'
             })
             elem.addEventListener('mouseleave', function () {
                 elem.classList.remove('show')
                 main.style.filter = 'blur(0)'
                 footer.style.filter = 'blur(0)'
+                document.querySelector('body').style.background = 'white'
             })
         })
     }
@@ -268,8 +270,9 @@ function init(){
                 elem.classList.remove('show')
             })
             loader.classList.remove('black');
-            main.style.filter = 'blur(2px)'
-            footer.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            footer.style.filter = 'blur(5px)'
+            document.querySelector('body').style.background = 'whitesmoke'
             setTimeout(function () {
                 hideFilters()
                 changeHeading('Upperwears')
@@ -277,6 +280,7 @@ function init(){
                 loader.classList.add('black')
                 main.style.filter = 'blur(0)'
                 footer.style.filter = 'blur(0)'
+                document.querySelector('body').style.background = 'white'
             }, 1000)
         })
         document.querySelector('#bottoms').addEventListener('click', function () {
@@ -284,8 +288,9 @@ function init(){
                 elem.classList.remove('show')
             })
             loader.classList.remove('black');
-            main.style.filter = 'blur(2px)'
-            footer.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            footer.style.filter = 'blur(5px)'
+            document.querySelector('body').style.background = 'whitesmoke'
             setTimeout(function () {
                 hideFilters()
                 changeHeading('Bottomwears')
@@ -293,6 +298,7 @@ function init(){
                 loader.classList.add('black')
                 main.style.filter = 'blur(0)'
                 footer.style.filter = 'blur(0)'
+                document.querySelector('body').style.background = 'white'
             }, 1000)
         })
         document.querySelector('#goggles').addEventListener('click', function () {
@@ -300,8 +306,9 @@ function init(){
                 elem.classList.remove('show')
             })
             loader.classList.remove('black');
-            main.style.filter = 'blur(2px)'
-            footer.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            footer.style.filter = 'blur(5px)'
+            document.querySelector('body').style.background = 'whitesmoke'
             setTimeout(function () {
                 hideFilters()
                 changeHeading('Eyewears')
@@ -309,6 +316,7 @@ function init(){
                 loader.classList.add('black')
                 main.style.filter = 'blur(0)'
                 footer.style.filter = 'blur(0)'
+                document.querySelector('body').style.background = 'white'
             }, 1000)
         })
         document.querySelector('#footwear').addEventListener('click', function () {
@@ -316,8 +324,9 @@ function init(){
                 elem.classList.remove('show')
             })
             loader.classList.remove('black');
-            main.style.filter = 'blur(2px)'
-            footer.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            footer.style.filter = 'blur(5px)'
+            document.querySelector('body').style.background = 'whitesmoke'
             setTimeout(function () {
                 hideFilters()
                 changeHeading('Footwears')
@@ -325,6 +334,7 @@ function init(){
                 loader.classList.add('black')
                 main.style.filter = 'blur(0)'
                 footer.style.filter = 'blur(0)'
+                document.querySelector('body').style.background = 'white'
             }, 1000)
         })
         document.querySelector('#bag').addEventListener('click', function () {
@@ -332,8 +342,9 @@ function init(){
                 elem.classList.remove('show')
             })
             loader.classList.remove('black');
-            main.style.filter = 'blur(2px)'
-            footer.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            footer.style.filter = 'blur(5px)'
+            document.querySelector('body').style.background = 'whitesmoke'
             setTimeout(function () {
                 hideFilters()
                 changeHeading('Bags')
@@ -341,6 +352,7 @@ function init(){
                 loader.classList.add('black')
                 main.style.filter = 'blur(0)'
                 footer.style.filter = 'blur(0)'
+                document.querySelector('body').style.background = 'white'
             }, 1000)
         })
     }

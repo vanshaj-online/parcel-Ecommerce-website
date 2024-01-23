@@ -19,11 +19,11 @@ function dropdown(){
     hovers.forEach(elem => {
         elem.addEventListener('mousemove', function () {
             elem.classList.add('show')
-            main.style.filter = 'blur(2px)'
-            footer.style.filter = 'blur(2px)'
-            s2.style.filter = 'blur(2px)'
-            s3.style.filter = 'blur(2px)'
-            s4.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            footer.style.filter = 'blur(5px)'
+            s2.style.filter = 'blur(5px)'
+            s3.style.filter = 'blur(5px)'
+            s4.style.filter = 'blur(5px)'
         })
         elem.addEventListener('mouseleave', function () {
             elem.classList.remove('show')

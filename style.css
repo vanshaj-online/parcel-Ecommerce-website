@@ -55,7 +55,9 @@ body {
     width: 100%;
     background-color: white;
 }
-
+body{
+    transition: filter .2s linear,background .2s;
+}
 img{
     -webkit-user-drag: none;
 }

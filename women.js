@@ -38,11 +38,13 @@ function dropdown(){
     hovers.forEach(elem => {
         elem.addEventListener('mousemove', function () {
             elem.classList.add('show')
-            main.style.filter = 'blur(2px)'
+            main.style.filter = 'blur(5px)'
+            document.querySelector('body').style.background = 'whitesmoke'
         })
         elem.addEventListener('mouseleave', function () {
             elem.classList.remove('show')
             main.style.filter = 'blur(0)'
+            document.querySelector('body').style.background = 'white'
         })
     })
 }
