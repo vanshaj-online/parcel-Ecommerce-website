@@ -255,23 +255,33 @@ function init(){
     }
     categoryFilter()
 
+    function loader(){
+        setTimeout(() =>{
+                document.querySelector('.progress').style.animation = 'progress 1s linear 1 forwards';
+            },1000)
+    }
+
     function search(){
         searchbox.addEventListener(('input'),function(e){
             const value = e.target.value.toLowerCase();
             let hidden = 0;
-            products.forEach((elem) =>{
-                elem.classList.remove("hidden")
-                let text = elem.children[0].children[2].children[0].firstChild.textContent.toLowerCase();
-                if(!text.includes(value)){
-                    elem.classList.add('hidden');
-                }
-                if(elem.classList.contains('hidden')){
-                    hidden += 1
-                }
-                if(hidden === total){
-                    document.querySelector('.no-product').style.display = 'flex';
-                }else{document.querySelector('.no-product').style.display = 'none';}
-            })
+            loader()
+            setTimeout(() => {
+                products.forEach((elem) =>{
+                    elem.classList.remove("hidden")
+                    let text = elem.children[0].children[2].children[0].firstChild.textContent.toLowerCase();
+                    if(!text.includes(value)){
+                        elem.classList.add('hidden');
+                    }
+                    if(elem.classList.contains('hidden')){
+                        hidden += 1
+                    }
+                    if(hidden === total){
+                        document.querySelector('.no-product').style.display = 'flex';
+                    }else{document.querySelector('.no-product').style.display = 'none';}
+                    document.querySelector('.progress').style.animation = '';
+                })
+            },1500)
         })
     }
     search()

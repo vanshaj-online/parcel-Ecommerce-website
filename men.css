@@ -142,34 +142,24 @@ nav {
     line-height: 10vh;
 }
 
-.right-nav input,
-.right-nav button {
+.right-nav input{
     outline: none;
     border: none;
     padding: 0 2vh;
     height: 50%;
-    border-radius: 7px 0 0 7px;
-    font-weight: 900;
+    border-radius: 7px;
     font-family: "Poppins";
     width: 60%;
-    box-shadow: 0px 0px 8px -1px rgba(145, 145, 145, 0.398);
+    box-shadow: 5px 5px 17px #c8c8c8,
+             -5px -5px 17px #ffffff;
     font-weight: 500;
+    color: #333;   
 }
 
-.right-nav button {
-    border-radius: 0 7px 7px 0;
-    cursor: pointer;
-    width: 6vh;
-    display: flex;
-        justify-content: center;
-        align-items: center;
-    padding: 0;
-    background-color: rgb(212, 211, 211);
-}
-
-.right-nav button img {
-    height: 3vh;
-    width: 3vh;
+.right-nav input::placeholder{
+    font-size: 1.5rem;
+    letter-spacing: -.5px;
+    text-transform: capitalize;
 }
 
 .cart {
@@ -287,8 +277,19 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
+.progress{
+    display: inline-block;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: #74bac0;
+    /* animation: progress 1s linear 1 forwards; */
+}
 
 .main{
     width: 100%;
@@ -432,7 +433,7 @@ main{
     width: 100%;
     padding: 0 1vh;
     height: fit-content;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
     display: flex;
 }
@@ -680,3 +681,25 @@ footer>div>div:first-child {
 }
 
 /* loader */
+
+/* progress animation */
+
+
+@keyframes progress {
+    0%{
+        width: 0%;
+    }
+    99%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+
+
+
+
+
+/* progress animation */
