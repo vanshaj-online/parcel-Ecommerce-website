@@ -1,32 +1,22 @@
 function init(){
     let heading = document.querySelector('.shop > h1');
     let filterBtn = document.querySelectorAll('.filter-all');
-    let loader = document.querySelector('.loader');
-    var hovers = document.querySelectorAll('.hover');
-    var main = document.querySelector('main')
     var footer = document.querySelector('footer');
     var loginbtn = document.querySelector('.profile')
     var loginhvr = document.querySelector('.hvr');
-    var products = document.querySelectorAll('.shop-card');
+    let products = document.querySelectorAll('.shop-card');
     let btns = document.querySelectorAll('.filter > span');
+    let searchbox = document.querySelector('.right-nav > input')
+    let total = 0;
+    
 
-    function dropdown() {    
-        hovers.forEach(elem => {
-            elem.addEventListener('mousemove', function () {
-                elem.classList.add('show')
-                main.style.filter = 'blur(5px)'
-                footer.style.filter = 'blur(5px)'
-                document.querySelector('body').style.background = 'whitesmoke'
-            })
-            elem.addEventListener('mouseleave', function () {
-                elem.classList.remove('show')
-                main.style.filter = 'blur(0)'
-                footer.style.filter = 'blur(0)'
-                document.querySelector('body').style.background = 'white'
-            })
+
+    function totalProducts(){
+        products.forEach((e) =>{
+            total += 1;
         })
     }
-    dropdown()
+    totalProducts()
 
     function dropdownprofile() {
         
@@ -53,7 +43,7 @@ function init(){
             })
 
         }
-        function removeHidden() {
+        var removeHidden = () => {
             products.forEach(elem => {
                 if (elem.classList.contains('hidden')) {
                     elem.classList.remove('hidden')
@@ -100,7 +90,6 @@ function init(){
             products.forEach(elem => {
                 if (!elem.classList.contains('bags')) {
                     elem.classList.add('hidden')
-                    console.log('bags function ran successfully')
                 }
             })
         }
@@ -179,7 +168,6 @@ function init(){
             removeHidden()
             changeColor()
             bagsFilter()
-            console.log('bags button clicked successfully')
         })
         document.querySelector('#accessories').addEventListener('click', function () {
             removeHidden()
@@ -219,7 +207,6 @@ function init(){
             products.forEach(elem => {
                 if (!elem.classList.contains('upper')) {
                     elem.classList.add('hidden')
-                    console.log(elem)
                 } else if (elem.classList.contains('upper') && elem.classList.contains('hidden')) {
                     elem.classList.remove('hidden')
                 }
@@ -265,97 +252,29 @@ function init(){
                 }
             })
         }
-        document.querySelector('#upper').addEventListener('click', function () {
-            hovers.forEach(elem =>{
-                elem.classList.remove('show')
-            })
-            loader.classList.remove('black');
-            main.style.filter = 'blur(5px)'
-            footer.style.filter = 'blur(5px)'
-            document.querySelector('body').style.background = 'whitesmoke'
-            setTimeout(function () {
-                hideFilters()
-                changeHeading('Upperwears')
-                onlyUpper()
-                loader.classList.add('black')
-                main.style.filter = 'blur(0)'
-                footer.style.filter = 'blur(0)'
-                document.querySelector('body').style.background = 'white'
-            }, 1000)
-        })
-        document.querySelector('#bottoms').addEventListener('click', function () {
-            hovers.forEach(elem => {
-                elem.classList.remove('show')
-            })
-            loader.classList.remove('black');
-            main.style.filter = 'blur(5px)'
-            footer.style.filter = 'blur(5px)'
-            document.querySelector('body').style.background = 'whitesmoke'
-            setTimeout(function () {
-                hideFilters()
-                changeHeading('Bottomwears')
-                onlyBottom()
-                loader.classList.add('black')
-                main.style.filter = 'blur(0)'
-                footer.style.filter = 'blur(0)'
-                document.querySelector('body').style.background = 'white'
-            }, 1000)
-        })
-        document.querySelector('#goggles').addEventListener('click', function () {
-            hovers.forEach(elem => {
-                elem.classList.remove('show')
-            })
-            loader.classList.remove('black');
-            main.style.filter = 'blur(5px)'
-            footer.style.filter = 'blur(5px)'
-            document.querySelector('body').style.background = 'whitesmoke'
-            setTimeout(function () {
-                hideFilters()
-                changeHeading('Eyewears')
-                onlyGoggles()
-                loader.classList.add('black')
-                main.style.filter = 'blur(0)'
-                footer.style.filter = 'blur(0)'
-                document.querySelector('body').style.background = 'white'
-            }, 1000)
-        })
-        document.querySelector('#footwear').addEventListener('click', function () {
-            hovers.forEach(elem => {
-                elem.classList.remove('show')
-            })
-            loader.classList.remove('black');
-            main.style.filter = 'blur(5px)'
-            footer.style.filter = 'blur(5px)'
-            document.querySelector('body').style.background = 'whitesmoke'
-            setTimeout(function () {
-                hideFilters()
-                changeHeading('Footwears')
-                onlyShoes()
-                loader.classList.add('black')
-                main.style.filter = 'blur(0)'
-                footer.style.filter = 'blur(0)'
-                document.querySelector('body').style.background = 'white'
-            }, 1000)
-        })
-        document.querySelector('#bag').addEventListener('click', function () {
-            hovers.forEach(elem => {
-                elem.classList.remove('show')
-            })
-            loader.classList.remove('black');
-            main.style.filter = 'blur(5px)'
-            footer.style.filter = 'blur(5px)'
-            document.querySelector('body').style.background = 'whitesmoke'
-            setTimeout(function () {
-                hideFilters()
-                changeHeading('Bags')
-                onlyBags()
-                loader.classList.add('black')
-                main.style.filter = 'blur(0)'
-                footer.style.filter = 'blur(0)'
-                document.querySelector('body').style.background = 'white'
-            }, 1000)
-        })
     }
     categoryFilter()
+
+    function search(){
+        searchbox.addEventListener(('input'),function(e){
+            const value = e.target.value.toLowerCase();
+            let hidden = 0;
+            products.forEach((elem) =>{
+                elem.classList.remove("hidden")
+                let text = elem.children[0].children[2].children[0].firstChild.textContent.toLowerCase();
+                if(!text.includes(value)){
+                    elem.classList.add('hidden');
+                }
+                if(elem.classList.contains('hidden')){
+                    hidden += 1
+                }
+                if(hidden === total){
+                    document.querySelector('.no-product').style.display = 'flex';
+                }else{document.querySelector('.no-product').style.display = 'none';}
+            })
+        })
+    }
+    search()
+
 }
 init()
