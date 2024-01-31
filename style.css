@@ -339,8 +339,6 @@ main > *{
     color: #333;
 }
 
-
-
 #text a {
     height: 6vh;
     width: fit-content;
@@ -386,6 +384,75 @@ main > *{
     object-fit: contain;
     object-position: center;
 }
+
+.banner-container{
+    width: 100%;
+    height: 70dvh;
+    padding: 7vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.img-container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.img-container button{
+    position: absolute;
+    top: 50%;
+    z-index: 8;
+    width: 4%;
+    display: flex;
+    height: 100%;
+    transform: translateY(-50%);
+    border: none;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.105) 0%, transparent 90%);
+    transition: .2s linear;
+}
+
+
+.img-container>button:last-child{
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.105) 0%, transparent 90%);
+}
+
+.img-container button img{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-position: center;
+    object-fit: contain;
+}
+
+.img-container button:active > img{
+    transform: translateY(-50%) scale(.9);
+}
+
+.img-container::-webkit-scrollbar{
+    display: none;
+}
+
+.img-container img{
+    min-width: 100%;
+    object-position: center;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    z-index: 7;
+}
+
 
 .section-2 {
     min-height: 100vh;
@@ -755,23 +822,25 @@ main > *{
     margin: 10vh 0;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .right, .left{
     height: 30vw;
-    width: 50%;
+    width: 45%;
+    border-radius: 30px;
+    overflow: hidden;
     display: inline-block;
 }
 
-.right a, .left a{
+.section-4>div a{
     height: 100%;
     width: 100%;
-    overflow: hidden;
     display: flex;
     position: relative;
 }
 
-.right a img, .left a img{
+.section-4>div a img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -781,36 +850,50 @@ main > *{
     -webkit-filter: brightness(.9);
 }
 
-.right a img:hover,
-.left a img:hover{
+.section-4>div:hover{
+    box-shadow: 2px 2px 17px #828282,
+             -2px -2px 17px #ffffff;
+    transition: .1s linear;
+}
+
+.section-4>div:hover > a img{
     filter: brightness(1);
     -webkit-filter: brightness(1);
 }
 
-.right a span,
-.left a span{
+.section-4>div a span{
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 5vw;
-    min-width: 5vw;
+    min-width: 7vw;
     align-items: center;
-    bottom: 1%;
+    bottom: 0;
     font-family: "Poppins";
     text-transform: capitalize;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.right a span h5,
-.left a span h5{
-    color: white;
-    background-color: orangered;
-    padding: .9vh;
-    font-weight: 900;
+.section-4>div a span h5{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.372);
+    padding: 10px;
+    font-weight: 100;
+    width: inherit;
     font-size: 1.3vw;
     border-radius: 5px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.section-4>div a span h5 svg{
+    transition: .1s linear;
+}
+
+.section-4>div:hover > a span h5 svg{
+    transform: translateX(8px);
 }
 
 .section-4 .for{
@@ -948,3 +1031,4 @@ footer>div> div:first-child{
     object-fit: contain;
     object-position: center;
 }
+

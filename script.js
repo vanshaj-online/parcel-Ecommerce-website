@@ -1,4 +1,5 @@
-var imgDivs = document.querySelectorAll('.item');
+const imgDivs = document.querySelectorAll('.item');
+let bannerImages = document.querySelectorAll('.img-container > img')
 function addDataSrc(){
     imgDivs.forEach((e) =>{
         let imgDivs = e.querySelector('img')
@@ -12,8 +13,8 @@ addDataSrc()
 
 
 function dropdownprofile(){
-    var loginbtn = document.querySelector('.profile')
-    var loginhvr = document.querySelector('.hvr')
+     let loginbtn = document.querySelector('.profile')
+     let loginhvr = document.querySelector('.hvr')
     loginbtn.addEventListener('mousemove', () => {
         loginhvr.classList.add('active')
     })
@@ -34,3 +35,31 @@ function lazyload(){
     })
 }
 lazyload()
+
+function changeImg(){
+    var counter = 1;
+    let imgs = document.querySelectorAll('.img-container > img')
+    let btns = document.querySelectorAll('.img-container > button')
+ 
+        document.querySelector('[data-left] > img').addEventListener('click',function(){
+            if(counter == 1){
+                document.querySelector('[data-left]').setAttribute('disabled','true')
+            }
+            else{
+                counter = counter - 1;
+                console.log(counter)
+            }
+        })
+        document.querySelector('[data-right] > img').addEventListener('click',function(){
+            if(counter >= 3){
+                document.querySelector('[data-right]').setAttribute('disabled','true')
+            }
+            else{
+                counter = counter + 1;
+                console.log(counter )
+                imgs[1].style.transform = 'translatex(-100%)'
+            }
+        })
+    // document.querySelector('[data-left] > img').addEventListener('click',function(){console.log('hey')})
+}
+changeImg()
