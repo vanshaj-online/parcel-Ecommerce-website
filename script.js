@@ -37,29 +37,38 @@ function lazyload(){
 lazyload()
 
 function changeImg(){
-    var counter = 1;
-    let imgs = document.querySelectorAll('.img-container > img')
-    let btns = document.querySelectorAll('.img-container > button')
+    var counter = 0;
+    let imgs = document.querySelectorAll('.imgs > img');
+    let btns = document.querySelectorAll('.img-container > button');
+    imgs.forEach((img,index) =>{
+        img.style.left = `${index * 100}%`
+    })
+
+    function slideImgs(){
+        imgs.forEach((img) => {
+            img.style.transform = `translatex(-${counter * 100}%)`
+        })
+    }
  
         document.querySelector('[data-left] > img').addEventListener('click',function(){
-            if(counter == 1){
+            if(counter == 0){
                 document.querySelector('[data-left]').setAttribute('disabled','true')
             }
             else{
                 counter = counter - 1;
                 console.log(counter)
+                slideImgs()
             }
         })
         document.querySelector('[data-right] > img').addEventListener('click',function(){
-            if(counter >= 3){
+            if(counter >= 2){
                 document.querySelector('[data-right]').setAttribute('disabled','true')
             }
             else{
                 counter = counter + 1;
                 console.log(counter )
-                imgs[1].style.transform = 'translatex(-100%)'
+                slideImgs()
             }
         })
-    // document.querySelector('[data-left] > img').addEventListener('click',function(){console.log('hey')})
 }
 changeImg()
