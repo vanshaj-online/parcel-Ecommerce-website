@@ -56,7 +56,6 @@ function changeImg(){
             }
             else{
                 counter = counter - 1;
-                console.log(counter)
                 slideImgs()
             }
         })
@@ -66,7 +65,6 @@ function changeImg(){
             }
             else{
                 counter = counter + 1;
-                console.log(counter )
                 slideImgs()
             }
         })

@@ -95,18 +95,6 @@ nav {
     text-transform: capitalize;
 }
 
-.center-nav>li>ul:last-child>a::before {
-    position: absolute;
-    content: 'new';
-    top: -1.5vh;
-    color: orangered;
-    font-weight: 900;
-    font-size: .8vw;
-    border-radius: 8px;
-    text-transform: capitalize;
-    padding: .5vh;
-    left: 100%;
-}
 
 .center-nav>li>ul>a {
     text-decoration: none;
