@@ -150,8 +150,8 @@ nav {
     border-radius: 7px;
     font-family: "Poppins";
     width: 60%;
-    box-shadow: 5px 5px 17px #c8c8c8,
-             -5px -5px 17px #ffffff;
+    box-shadow: 2px 2px 17px #c8c8c8,
+             -2px -2px 17px #ffffff;
     font-weight: 500;
     color: #333;   
 }
@@ -368,6 +368,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .shop-card{
@@ -376,13 +378,14 @@ main{
     width: 22rem;
     align-items: center;
     justify-content: center;
-    margin: 2vh;
     transition: .1s linear;
-    border: .01px solid rgb(201, 201, 201);
+    background-color: whitesmoke;
+    border-radius: 15px;
     transition: all .2s linear;
 }
 .shop-card:hover{
-    box-shadow: 0 0 12px -5px grey;
+    box-shadow: 5px 5px 17px #c8c8c8,
+                -5px -5px 17px #ffffff;
     transform: translateY(-2%);
 }
 
@@ -393,13 +396,14 @@ main{
 }
 
 .item{
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    height: 94%;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: start;
     display: flex;
-    padding-bottom: 1vh;
     flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .item .photo{
@@ -427,6 +431,7 @@ main{
     width: 100%;
     object-fit: cover;
     object-position: top;
+    mix-blend-mode:darken;
 }
 
 .title-price, .brand{
@@ -444,7 +449,7 @@ main{
     text-transform: capitalize;
     /* white-space: nowrap; */
     height: auto;
-    font-weight: 600;
+    font-weight: 500;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -459,10 +464,11 @@ main{
 .brand span a{
     font-size: 1vw;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     color: #555;
     width: max-content;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .brand span a{
@@ -471,8 +477,8 @@ main{
     display: flex;
     justify-content: center;
     font-weight: 600;
-    color: black;
-    font-size: 1.2vw;
+    color: #222;
+    font-size: 1vw;
 }
 
 .no-product{

@@ -9,6 +9,7 @@ function init(){
     let searchbox = document.querySelector('.right-nav > input')
     let total = 0;
     
+    
 
 
     function totalProducts(){
