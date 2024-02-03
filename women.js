@@ -10,7 +10,7 @@ function scroll(){
                 next.addEventListener('click', function () {
                     scroller.forEach(elem => {
                         elem.style.transition = '.2s linear'
-                        elem.style.transform = 'translateX(-100%)'
+                        elem.style.transform = 'translateX(-120%)'
                     })
                     next.classList.remove('show')
                     prev.classList.add('show')
@@ -44,3 +44,4 @@ function dropdownprofile() {
     })
 }
 dropdownprofile()
+console.log(window.innerWidth)
