@@ -1,22 +1,4 @@
-function dropdown() {
-    var hovers = document.querySelectorAll('.hover');
-    var main = document.querySelector('main')
 
-    hovers.forEach(elem => {
-        elem.addEventListener('mousemove', function () {
-            console.log('mouse is moving')
-            elem.classList.add('show')
-            main.style.filter = 'blur(5px)'
-            document.querySelector('body').style.background = 'whitesmoke'
-        })
-        elem.addEventListener('mouseleave', function () {
-            elem.classList.remove('show')
-            main.style.filter = 'blur(0)'
-            document.querySelector('body').style.background = 'white'
-        })
-    })
-}
-dropdown()
 
 function dropdownprofile() {
     var loginbtn = document.querySelector('.profile')

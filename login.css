@@ -67,15 +67,18 @@ nav {
 }
 
 .logo a {
-    height: 100%;
-    width: 100%;
     display: grid;
+    padding: 0 4px;
     place-content: center;
+    font-family: 'Righteous', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background-color: #74bac0;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: clamp(1.3vw,1.4vw, 1.5vw);
 }
 
-.logo a img {
-    height: 8vmax;
-}
 
 .center-nav {
     width: 30%;
@@ -109,9 +112,6 @@ nav {
     color: #639fa5;
 }
 
-.center-nav>li>ul:first-child>a {
-    color: #639fa5;
-}
 
 .center-nav>li>ul {
     position: relative;

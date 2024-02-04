@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 @font-face {
     font-family: gilroy-light;
@@ -86,15 +87,18 @@ nav {
 }
 
 .logo a {
-    height: 100%;
-    width: 100%;
     display: grid;
+    padding: 0 4px;
     place-content: center;
+    font-family: 'Righteous', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background-color: #74bac0;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: clamp(1.3vw,1.4vw, 1.5vw);
 }
 
-.logo a img {
-    height: 8vmax;
-}
 
 .center-nav {
     width: 30%;
@@ -373,12 +377,21 @@ main{
 
 
 .filter{
-    width: 95%;
-    padding: 0 1vh;
-    height: 5vh;
+    width: 85%;
+    min-height: 5vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.filter>div{
+    display: flex;
+    align-items: center;
+}
+
+.filter .by-price{
+    padding: 0;
 }
 
 .filter>*{
@@ -390,10 +403,10 @@ main{
     display: none;
 }
 
-.filter>span{
+.filter span{
     margin-right: 2rem;
     text-transform: capitalize;
-    font-size: 1.2vw;
+    font-size: clamp(1vw, 1.2vw, 1.4vw);
     cursor: pointer;
     height: 100%;
     display: flex;
@@ -404,12 +417,12 @@ main{
 }
 
 
-.filter>span:hover{
+.filter span:hover{
     color: #639fa5;
 }
 
-.filter>h3{
-    font-size: 1.5vw;
+.filter h3{
+    font-size: clamp(1.2vw, 1.5vw, 1.6vw);
     height: 100%;
     color: #444;
     margin-right: 2rem;
