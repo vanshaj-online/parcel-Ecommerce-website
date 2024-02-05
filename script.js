@@ -80,16 +80,12 @@ function toggleMenu() {
 
     openmenu.addEventListener('click', function () {
         menu.style.transform = 'translatex(0%)'
-        // main.style.filter = 'blur(1px)'
-        // nav.style.filter = 'blur(1px)'
         main.style.opacity = '0.5'
         nav.style.opacity = '0.5'
         menuStatus = 'opened'
     })
     closemenu.addEventListener('click', function () {
         menu.style.transform = 'translatex(100%)'
-        // nav.style.filter = 'blur(0)'
-        // main.style.filter = 'blur(0)'
         nav.style.opacity = '1'
         main.style.opacity = '1'
         menuStatus = 'closed'
