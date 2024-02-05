@@ -1161,6 +1161,10 @@ footer>div> div:first-child{
 
 @media screen and (319px < width < 426px) {
 
+    *{
+        user-select: none;
+    }
+
     .hide{
         display: none;
     }
@@ -1305,6 +1309,7 @@ footer>div> div:first-child{
         width: 100%;
         position: relative;
         padding-top:5vh ;
+        transition: .15s all linear;
     }
 
     .hero{
@@ -1314,7 +1319,6 @@ footer>div> div:first-child{
         margin: 0;
         min-width: 100%;
         padding: 0;
-        /* margin-top: 5vh; */
     }
 
     .hero > div {
