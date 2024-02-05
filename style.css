@@ -1147,7 +1147,9 @@ footer>div> div:first-child{
     display: none;
 }
 
-
+.side-bar{
+    display: none;
+}
 /* mobile elements that are hidden in desktop */
 
 
@@ -1157,12 +1159,19 @@ footer>div> div:first-child{
 
 /* small screen sizes devices */
 
-@media screen and (319px < width < 425px) {
+@media screen and (319px < width < 426px) {
 
+    .hide{
+        display: none;
+    }
+
+    
     html,
     body{
         height: 100dvh;
     }
+
+    /* header & navbar section */
 
     header,
     nav{
@@ -1172,6 +1181,7 @@ footer>div> div:first-child{
         align-items: center;
         padding: 0;
         justify-content: space-between;
+        box-shadow: none;
     }
 
     .center-nav,
@@ -1213,8 +1223,88 @@ footer>div> div:first-child{
         transform: translate(-50%,-50%);
     }
 
+    .side-bar{
+        height: 110dvh;
+        width: 67%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: -2px 14px 12px 8px rgba(128, 128, 128, 0.224);
+        transform: translateX(100%);
+        transition: .15s linear all;
+    }
+
+    .closebtn{
+        height: 60px;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closebtn img{
+        height: 50%;
+    }
+
+    .menu{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+        gap: 2rem;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: #555;
+        font-size: clamp(2vw, 4.0vw, 5vw);
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        font-weight: 100;
+        font-family: "Poppins", montserrat;
+    }
+    
+    .menu h3{
+        text-transform: uppercase;
+        font-family: "Poppins", montserrat;
+        font-weight: 800;
+        color: black;
+        font-size: clamp(3vw, 4.6vw, 5vw);
+    }
+
+    #logo{
+        width: 100%;
+        display: flex;
+        margin: 1vh 0;
+        justify-content: center;
+    }
+
+    #logo h3{
+        font-family: 'righteous', gilroy;
+        font-size: clamp(6vw, 7vw, 8.5vw);
+        background-color: #74bac0;
+        color: white;
+        padding: 0 5px;
+        letter-spacing: 2px;
+    }
+
+
+
+    /* header & navbar section */
+
     #home{
         width: 100%;
+        position: relative;
+        padding-top:5vh ;
     }
 
     .hero{
@@ -1224,7 +1314,7 @@ footer>div> div:first-child{
         margin: 0;
         min-width: 100%;
         padding: 0;
-        margin-top: 5vh;
+        /* margin-top: 5vh; */
     }
 
     .hero > div {
@@ -1473,8 +1563,8 @@ footer>div> div:first-child{
     }
 
     .item{
-        height: 25vh;
-        width: 17.8vh;
+        height: 50vmin;
+        width: 35vmin;
     }
 
     .item a h3{
@@ -1532,6 +1622,7 @@ footer>div> div:first-child{
         grid-template-columns: repeat(3, auto);
         place-content: flex-start ;
         padding: 0 1rem ;
+        gap: 1rem;
         grid-template-rows: auto auto auto;
     }
 
@@ -1551,7 +1642,9 @@ footer>div> div:first-child{
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-top: 2vh;
     }
+
 
     .original > div{
         width: 100%;

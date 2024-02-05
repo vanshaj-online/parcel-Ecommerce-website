@@ -70,3 +70,23 @@ function changeImg(){
         })
 }
 changeImg()
+
+function toggleMenu(){
+    let openmenu = document.querySelector('[data-open-menu]')
+    let closemenu = document.querySelector('[data-close-menu]')
+    let menu = document.querySelector('.side-bar')
+
+    openmenu.addEventListener('click',function(){
+            closemenu.classList.remove('hide')
+            openmenu.classList.add('hide')
+            menu.style.transform = 'translatex(0%)'
+        })
+        closemenu.addEventListener('click',function(){
+            menu.style.transform = 'translatex(100%)'
+            closemenu.classList.add('hide')
+            openmenu.classList.remove('hide')
+    })
+    
+}
+
+toggleMenu()
