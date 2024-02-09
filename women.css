@@ -88,7 +88,7 @@ nav {
     background-color: white;
 }
 
-.right-nav,
+.search-nav,
 .logo {
     width: 25%;
     justify-content: center;
@@ -193,7 +193,7 @@ nav {
     opacity: 1;
 }
 
-.right-nav input{
+.search-nav input{
     outline: none;
     border: none;
     padding: 0 2vh;
@@ -207,27 +207,12 @@ nav {
     font-weight: 500;
 }
 
-.right-nav input::placeholder{
+.search-nav input::placeholder{
     font-size: clamp(1.3rem, 1.5rem, 1.5rem);
     text-transform: capitalize;
     letter-spacing: -.2px;
 }
 
-.right-nav button {
-    border-radius: 0 7px 7px 0;
-    cursor: pointer;
-    width: 6vh;
-    padding: 0;
-    background-color: rgb(212, 211, 211);
-    display: flex;
-        justify-content: center;
-        align-items: center;
-}
-
-.right-nav button img {
-    height: 3vh;
-    width: 3vh;
-}
 
 .cart {
     width: 8%;
@@ -719,3 +704,394 @@ footer>div> div:first-child{
 }
 
 /* footer section */
+
+
+
+ /* mobile elements that are hidden in desktop */
+ .right-nav{
+    display: none;
+}
+
+.text-for-image{
+    display: none;
+}
+
+.side-bar{
+    display: none;
+}
+
+.filter-btn{
+    display: none;
+}
+
+/* mobile elements that are hidden in desktop */
+
+@media screen and (319px < width < 426px) {
+
+    *{
+        user-select: none;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    
+    html,
+    body{
+        height: 100dvh;
+    }
+
+    /* header & navbar section */
+
+    header,
+    nav{
+        min-height: 100px;
+        width: 100%;
+        display: grid;
+        box-shadow: none;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    nav{
+        padding: 5px;
+        gap: 2rem;
+    }
+
+    .search-nav{
+        grid-column: span 2;
+        width: auto;
+    }
+
+    .search-nav input{
+        height: 100%;
+        width: 90%;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    nav > div{
+        width: 50%;
+    }
+
+    .center-nav,
+    .cart{
+        display: none;
+    }
+
+    .logo{
+        height: 100%;
+        width: 60%;
+    }
+
+    .logo a{
+        font-size: clamp(1.8rem, 2rem, 2.5rem);
+        background-color: transparent;
+        color: #74bac0;
+    }
+
+    .right-nav{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .btn{
+        height: 100%;
+        width: 20%;
+        position: relative;
+    }
+    
+    .btn img{
+        height: 50%;
+        object-fit: contain;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .side-bar{
+        height: 110dvh;
+        width: 67%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: -2px 14px 12px 8px rgba(128, 128, 128, 0.224);
+        transform: translateX(100%);
+        transition: .15s linear all;
+    }
+
+    .closebtn{
+        height: 60px;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closebtn img{
+        height: 50%;
+    }
+
+    .menu{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+        gap: 2rem;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: #555;
+        font-size: clamp(2vw, 4.0vw, 5vw);
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        font-weight: 100;
+        font-family: "Poppins", montserrat;
+    }
+    
+    .menu h3{
+        text-transform: uppercase;
+        font-family: "Poppins", montserrat;
+        font-weight: 800;
+        color: black;
+        font-size: clamp(3vw, 4.6vw, 5vw);
+    }
+
+    #logo{
+        width: 100%;
+        display: flex;
+        margin: 1vh 0;
+        justify-content: center;
+    }
+
+    #logo a{
+        font-family: 'righteous', gilroy;
+        font-size: clamp(6vw, 7vw, 8.5vw);
+        background-color: #74bac0;
+        color: white;
+        padding: 0 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* header and navbar section */
+
+
+    /* main section */
+
+    main{
+        position: relative;
+    }
+
+    .shop{
+        margin: 3.5vw 0;
+    }
+
+    .shop h1{
+        font-size: clamp(6vw, 6.5vw,7.5vw);
+    }
+
+    /* filter bar styling */
+    
+    .filter{
+        width: 100%;
+        height: min-content;
+        display: flex;
+        overflow: hidden;
+        padding:  0 2.7rem;
+        gap: 1rem;
+        margin: 3.5vw 0;
+    }
+    
+    .filter-wrap{
+        position: absolute;
+        background-color: white;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        z-index: 5;
+        top: 0;
+        left: -100%;
+        overflow: hidden;
+        justify-content: flex-start;
+        box-shadow: -2px 14px 12px 8px rgba(128, 128, 128, 0.224);
+        gap: 2rem;
+        padding: 4rem 2rem;
+        transition: .2s linear;
+    }
+    
+    .filter-wrap > div{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        width: 100%;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .filter h3{
+        font-size: clamp(4.5vw, 5.3vw, 5.5vw);
+        font-weight: 500;
+        height: max-content;
+    }
+    
+    .filter span{
+        font-size: clamp(3.5vw, 4.8vw, 5.5vw);
+        height: max-content;
+        font-weight: 100;
+    }
+    
+    .filter-wrap .close-btn{
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .close-btn img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    
+    .filter-btn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: .5rem 1rem;
+        gap: .5rem;
+        width: min-content;
+        background-color: #74bac0;
+        border-radius: 10px;
+    }
+    
+    .filter-btn img{
+        height: 4.8vw;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+    
+    .filter-btn h3{
+        font-size: clamp(4.4vw, 4.8vw, 5.8vw);
+        color: white;
+    }
+    
+    /* filter bar styling */
+    
+    /* products list styling */
+    
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .no-product{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .no-product span,
+    .no-product img{
+        font-size: 7vw;
+        height: 50%;
+    }
+
+    .no-product img{
+        height: 50px;
+    }
+
+
+    /* products list styling */
+
+    /* main section styling*/
+
+
+
+    /* footer section styling */
+
+    footer{
+        flex-direction: column;
+    }
+
+    .online-shop{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+        place-content: flex-start;
+        padding: 0 1rem ;
+        gap: 1rem;
+    }
+
+    .head{
+        height: 50%;
+        width: 100%;
+        grid-column: span 3;
+    }
+
+    .policy{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        place-content: flex-start ;
+        padding: 0 1rem ;
+        gap: 1rem;
+        grid-template-rows: auto auto auto;
+    }
+
+    .policy>div:first-child{
+        grid-column: span 3;
+    }
+
+    .policy>div a{
+        white-space: nowrap;
+    }
+
+    .playstore{
+        display: none;
+    }
+
+    .original{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+
+    .original > div{
+        width: 100%;
+    }
+
+    .copyright{
+        font-weight: 100;
+        height: 3vh;
+        align-items: center;
+    }
+}   
+
+    /* footer section styling */
