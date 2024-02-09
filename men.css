@@ -350,7 +350,6 @@ main{
 
 .main{
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -841,9 +840,9 @@ footer>div> div:first-child{
 
 @media screen and (319px < width < 426px) {
    
-    .search-nav{
+    /* .search-nav{
         display: none;
-    }
+    } */
     
     
     *{
@@ -864,13 +863,33 @@ footer>div> div:first-child{
 
     header,
     nav{
-        height: 60px;
+        min-height: 100px;
         width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        justify-content: space-between;
+        display: grid;
         box-shadow: none;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    nav{
+        padding: 5px;
+        gap: 2rem;
+    }
+
+    .search-nav{
+        grid-column: span 2;
+        width: auto;
+    }
+
+    .search-nav input{
+        height: 100%;
+        width: 90%;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    nav > div{
+        width: 50%;
     }
 
     .center-nav,
@@ -879,8 +898,8 @@ footer>div> div:first-child{
     }
 
     .logo{
-        height: 50%;
-        width: 40%;
+        height: 100%;
+        width: 60%;
     }
 
     .logo a{
@@ -890,16 +909,16 @@ footer>div> div:first-child{
     }
 
     .right-nav{
-        width: 20%;
+        width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
     .btn{
         height: 100%;
-        width: 100%;
+        width: 20%;
         position: relative;
     }
     
@@ -994,6 +1013,10 @@ footer>div> div:first-child{
 
     main{
         position: relative;
+    }
+
+    .shop{
+        margin: 3.5vw 0;
     }
 
     .shop h1{
@@ -1101,20 +1124,93 @@ footer>div> div:first-child{
     .main{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .no-product{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .no-product span,
+    .no-product img{
+        font-size: 7vw;
+        height: 50%;
+    }
+
+    .no-product img{
+        height: 50px;
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     /* products list styling */
-}
+
+    /* main section styling*/
+
+
+
+    /* footer section styling */
+
+    footer{
+        flex-direction: column;
+    }
+
+    .online-shop{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+        place-content: flex-start;
+        padding: 0 1rem ;
+        gap: 1rem;
+    }
+
+    .head{
+        height: 50%;
+        width: 100%;
+        grid-column: span 3;
+    }
+
+    .policy{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        place-content: flex-start ;
+        padding: 0 1rem ;
+        gap: 1rem;
+        grid-template-rows: auto auto auto;
+    }
+
+    .policy>div:first-child{
+        grid-column: span 3;
+    }
+
+    .policy>div a{
+        white-space: nowrap;
+    }
+
+    .playstore{
+        display: none;
+    }
+
+    .original{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+
+    .original > div{
+        width: 100%;
+    }
+
+    .copyright{
+        font-weight: 100;
+        height: 3vh;
+        align-items: center;
+    }
+}   
+
+    /* footer section styling */
+
+

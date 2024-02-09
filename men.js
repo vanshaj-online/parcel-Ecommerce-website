@@ -286,9 +286,7 @@ function init() {
             }, 1500)
         })
     }
-    if (!searchnav.style.display == 'none') {
-        search()
-    }
+    search()
 
 
     function toggleMenu() {
