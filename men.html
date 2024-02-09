@@ -9,7 +9,31 @@
     <link rel="webiste icon" href="assets/logo.jpg" type="image/jpg">
 </head>
 
-<body>
+<body style="position: relative;">
+    <div class="side-bar">
+        <div class="closebtn">
+            <img src="./assets/menu-close.svg" data-close-menu class="" alt="">
+        </div>
+        <div class="menu">
+            <div id="logo">
+                <h3>parcel</h3>
+            </div>
+            <a href="men.html">men</a>
+            <a href="women.html">women</a>
+            <a href="#">accessories</a>
+            <a href="#">cart</a>
+            <a href="login.html">Account</a>
+            <h3>shop by category</h3>
+            <a href="">eyewear</a>
+            <a href="">casual wear</a>
+            <a href="">western wear</a>
+            <a href="">watches</a>
+            <a href="">office wear</a>
+            <a href="">bags</a>
+            <a href="">Formals</a>
+            <a href="">footwears</a>
+        </div>
+    </div>
     <span class="loader black"></span>
     <header>
         <nav>
@@ -32,7 +56,7 @@
                     </ul>
                 </li>
             </div>
-            <div class="right-nav">
+            <div class="search-nav">
                 <input type="text" placeholder="search men section" id="search">
             </div>
             <div class="cart">
@@ -48,31 +72,45 @@
                 </div>
                 <a href="" target="_blank"><img loading="lazy" src="assets/cart.svg" alt="cart"></a>
             </div>
+            <div class="right-nav">
+                <div class="btn">
+                    <img src="./assets/menu-open.svg" data-open-menu alt="">
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <div class="progress"></div>
         <div class="main">
             <div class="shop">
-                <h1>clothes for you</h1>
+                <h1>men's section</h1>
             </div>
             <div class="filter">
-                <div class="by-name">
-                    <h3 class="filter-all">filters</h3>
-                    <span class="filter-all" id="all">all</span>
-                    <span class="filter-all" id="shirt">shirts</span>
-                    <span class="filter-all" id="tshirt">tshirts</span>
-                    <span class="filter-all" id="jacket">jackets</span>
-                    <span class="filter-all" id="jeans">bottomwear</span>
-                    <span class="filter-all" id="shoes">shoes</span>
-                    <span class="filter-all" id="bags">bags</span>
-                    <span class="filter-all" id="accessories">accessories</span>
+                <div class="filter-btn">
+                    <img src="./assets/filterbtn.svg" alt="">
+                    <h3>filter</h3>
                 </div>
-                <div class="by-price">
-                    <h3> price</h3>
-                    <span id="low">all under 500</span>
-                    <span id="mid">all under 1000</span>
-                    <span id="high">all under 1500</span>
+                <div class="filter-wrap">
+                    <div class="close-btn">
+                        <img src="./assets/menu-close.svg" data-close-menu class="" alt="">
+                    </div>
+                    <div class="by-name">
+                        <h3 class="filter-all">filters</h3>
+                        <span class="filter-all" id="all">clear filter</span>
+                        <span class="filter-all" id="shirt">shirts</span>
+                        <span class="filter-all" id="tshirt">tshirts</span>
+                        <span class="filter-all" id="jacket">jackets</span>
+                        <span class="filter-all" id="jeans">bottomwear</span>
+                        <span class="filter-all" id="shoes">shoes</span>
+                        <span class="filter-all" id="bags">bags</span>
+                        <span class="filter-all" id="accessories">accessories</span>
+                    </div>
+                    <div class="by-price">
+                        <h3> price</h3>
+                        <span id="low">under 500</span>
+                        <span id="mid">under 1000</span>
+                        <span id="high">under 1500</span>
+                    </div>
                 </div>
             </div>
             <div class="container">

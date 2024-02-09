@@ -6,7 +6,8 @@ function init(){
     var loginhvr = document.querySelector('.hvr');
     let products = document.querySelectorAll('.shop-card');
     let btns = document.querySelectorAll('.filter > span');
-    let searchbox = document.querySelector('.right-nav > input')
+    let searchnav = document.querySelector('.search-nav')
+    let searchbox = document.querySelector('.search-nav > input')
     let total = 0;
     
     
@@ -285,7 +286,33 @@ function init(){
             },1500)
         })
     }
-    search()
+    if(!searchnav.style.display == 'none'){
+        search()
+    }
 
+
+    function toggleMenu() {
+        let openmenu = document.querySelector('[data-open-menu]')
+        let closemenu = document.querySelector('[data-close-menu]')
+        let menu = document.querySelector('.side-bar')
+        let main = document.querySelector('main')
+        let nav = document.querySelector('nav')
+    
+        openmenu.addEventListener('click', function () {
+            menu.style.transform = 'translatex(0%)'
+            main.style.opacity = '0.5'
+            nav.style.opacity = '0.5'
+            menuStatus = 'opened'
+        })
+        closemenu.addEventListener('click', function () {
+            menu.style.transform = 'translatex(100%)'
+            nav.style.opacity = '1'
+            main.style.opacity = '1'
+            menuStatus = 'closed'
+        })   
+    
+    }
+    
+    toggleMenu()
 }
 init()

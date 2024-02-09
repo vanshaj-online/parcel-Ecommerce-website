@@ -1160,15 +1160,16 @@ footer>div> div:first-child{
 /* small screen sizes devices */
 
 @media screen and (319px < width < 426px) {
+    
 
     *{
         user-select: none;
     }
-
+    
     .hide{
         display: none;
     }
-
+    
     
     html,
     body{
