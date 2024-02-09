@@ -1,7 +1,6 @@
-function init(){
+function init() {
     let heading = document.querySelector('.shop > h1');
     let filterBtn = document.querySelectorAll('.filter-all');
-    var footer = document.querySelector('footer');
     var loginbtn = document.querySelector('.profile')
     var loginhvr = document.querySelector('.hvr');
     let products = document.querySelectorAll('.shop-card');
@@ -9,19 +8,20 @@ function init(){
     let searchnav = document.querySelector('.search-nav')
     let searchbox = document.querySelector('.search-nav > input')
     let total = 0;
-    
-    
+    let main = document.querySelector('main')
+    let nav = document.querySelector('nav')
 
 
-    function totalProducts(){
-        products.forEach((e) =>{
+
+    function totalProducts() {
+        products.forEach((e) => {
             total += 1;
         })
     }
     totalProducts()
 
     function dropdownprofile() {
-        
+
         loginbtn.addEventListener('mousemove', () => {
             loginhvr.classList.add('active')
         })
@@ -117,8 +117,8 @@ function init(){
                 let p = e.querySelector('#price').innerHTML;
                 let arr = p.split(" ")
                 let price = Number(arr[arr.length - 1]);
-                if (price > 1000 ) {
-                    if (!e.classList.contains('hidden')){
+                if (price > 1000) {
+                    if (!e.classList.contains('hidden')) {
                         e.classList.add('hidden')
                     }
                 }
@@ -257,36 +257,36 @@ function init(){
     }
     categoryFilter()
 
-    function loader(){
-        setTimeout(() =>{
-                document.querySelector('.progress').style.animation = 'progress 1s linear 1 forwards';
-            },1000)
+    function loader() {
+        setTimeout(() => {
+            document.querySelector('.progress').style.animation = 'progress 1s linear 1 forwards';
+        }, 1000)
     }
 
-    function search(){
-        searchbox.addEventListener(('input'),function(e){
+    function search() {
+        searchbox.addEventListener(('input'), function (e) {
             const value = e.target.value.toLowerCase();
             let hidden = 0;
             loader()
             setTimeout(() => {
-                products.forEach((elem) =>{
+                products.forEach((elem) => {
                     elem.classList.remove("hidden")
                     let text = elem.children[0].children[2].children[0].firstChild.textContent.toLowerCase();
-                    if(!text.includes(value)){
+                    if (!text.includes(value)) {
                         elem.classList.add('hidden');
                     }
-                    if(elem.classList.contains('hidden')){
+                    if (elem.classList.contains('hidden')) {
                         hidden += 1
                     }
-                    if(hidden === total){
+                    if (hidden === total) {
                         document.querySelector('.no-product').style.display = 'flex';
-                    }else{document.querySelector('.no-product').style.display = 'none';}
+                    } else { document.querySelector('.no-product').style.display = 'none'; }
                     document.querySelector('.progress').style.animation = '';
                 })
-            },1500)
+            }, 1500)
         })
     }
-    if(!searchnav.style.display == 'none'){
+    if (!searchnav.style.display == 'none') {
         search()
     }
 
@@ -295,24 +295,38 @@ function init(){
         let openmenu = document.querySelector('[data-open-menu]')
         let closemenu = document.querySelector('[data-close-menu]')
         let menu = document.querySelector('.side-bar')
-        let main = document.querySelector('main')
-        let nav = document.querySelector('nav')
-    
+        
+
         openmenu.addEventListener('click', function () {
             menu.style.transform = 'translatex(0%)'
             main.style.opacity = '0.5'
             nav.style.opacity = '0.5'
-            menuStatus = 'opened'
         })
         closemenu.addEventListener('click', function () {
             menu.style.transform = 'translatex(100%)'
             nav.style.opacity = '1'
             main.style.opacity = '1'
-            menuStatus = 'closed'
-        })   
-    
+        })
+
     }
-    
+
     toggleMenu()
+
+    function toggleFilterBar() {
+        let filterbtn = document.querySelector('.filter-btn')
+        let filterBar = document.querySelector('.filter-wrap')
+        let filterclose = document.querySelector('.close-btn')
+        filterbtn.addEventListener('click',function(){
+            filterBar.style.left = 0;
+                window.addEventListener('scroll',function(){
+                        filterBar.style.left = '-100%'
+                    })
+        })
+        filterclose.addEventListener('click',function(){
+            filterBar.style.left = '-100%'
+        })
+        
+    }
+    toggleFilterBar()
 }
 init()
