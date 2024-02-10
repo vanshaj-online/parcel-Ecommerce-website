@@ -682,3 +682,249 @@ form button:hover {
 }
 
 /* signup form */
+
+
+/* only mobile screen elements */
+
+.right-nav{
+    display: none;
+}
+
+.text-for-image{
+    display: none;
+}
+
+.side-bar{
+    display: none;
+}
+
+.filter-btn{
+    display: none;
+}
+
+/* only mobile screen elements */
+
+
+/* 320px < width < 425px */
+
+@media screen and (319px < width < 426px) {
+    
+    .login .warn{
+        visibility: hidden;
+    }
+    
+    *{
+        user-select: none;
+    }
+    
+    .hide{
+        display: none;
+    }
+    
+    
+    html,
+    body{
+        height: 100dvh;
+    }
+
+    /* header & navbar section */
+
+    header,
+    nav{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    .center-nav,
+    .cart{
+        display: none;
+    }
+
+    .logo{
+        height: 50%;
+        width: 40%;
+    }
+
+    .logo a{
+        font-size: clamp(1rem, 1.4rem, 2.5rem);
+        background-color: transparent;
+        color: #74bac0;
+    }
+
+    .right-nav{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    
+    .btn img{
+        height: 50%;
+        object-fit: contain;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .side-bar{
+        height: 110dvh;
+        width: 67%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: -2px 14px 12px 8px rgba(128, 128, 128, 0.224);
+        transform: translateX(100%);
+        transition: .15s linear all;
+    }
+
+    .closebtn{
+        height: 60px;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closebtn img{
+        height: 50%;
+    }
+
+    .menu{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+        gap: 2rem;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: #555;
+        font-size: clamp(2vw, 4.0vw, 5vw);
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        font-weight: 100;
+        font-family: "Poppins", montserrat;
+    }
+    
+    .menu h3{
+        text-transform: uppercase;
+        font-family: "Poppins", montserrat;
+        font-weight: 800;
+        color: black;
+        font-size: clamp(3vw, 4.6vw, 5vw);
+    }
+
+    #logo{
+        width: 100%;
+        display: flex;
+        margin: 1vh 0;
+        justify-content: center;
+    }
+
+    #logo h3{
+        font-family: 'righteous', gilroy;
+        font-size: clamp(6vw, 7vw, 8.5vw);
+        background-color: #74bac0;
+        color: white;
+        padding: 0 5px;
+        letter-spacing: 2px;
+    }
+
+
+
+    /* header & navbar section */
+
+    /* main styling */
+
+    .main .left{
+        display: none;        
+    }
+
+    .right{
+        width: 100%;
+        height: 100%;
+    }
+
+    .right .border{
+        min-height: 75%;
+        width: 80%;
+    }
+
+    .login>form{
+        padding: 0;
+    }
+
+    .form .logo{
+        font-size: clamp(6.5vw, 7vw, 8vw);
+        margin: 0;
+    }
+
+    .login>form>input{
+        font-size: clamp(3.5vw, 4vw, 5vw);
+    }
+    
+    .login>form>input::placeholder{
+        font-weight: 100;
+    }
+
+    .login>form>#forget a{
+        font-size: clamp(3.5vw, 3.8vw, 5vw);
+    }
+    
+    form button,
+    .signup button{
+        width: auto;
+        height: auto;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(3.5vw, 4vw, 5vw);
+    }
+    
+    #new span,
+    #new span a,
+    .signup form>div:last-of-type>span{
+        font-size: clamp(2.5vw, 3.4vw, 5vw);
+        width: max-content;
+        display: flex;
+        gap: 5px;
+        white-space: nowrap;
+        align-items: center;
+    }
+    
+    .signup>form{
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+    .signup form input{
+        font-size: clamp(2.5vw, 3.4vw, 5vw);
+        padding: 3px;
+    }
+
+}
+/* 320px < width < 425px */

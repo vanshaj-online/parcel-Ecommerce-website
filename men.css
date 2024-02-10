@@ -1127,6 +1127,7 @@ footer>div> div:first-child{
         justify-content: flex-start;
     }
 
+
     .no-product{
         flex-direction: column;
         justify-content: space-evenly;

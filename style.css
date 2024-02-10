@@ -1489,7 +1489,7 @@ footer>div> div:first-child{
         min-height: 50vh;
         flex-direction: column;
         width: 100%;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .feat .model{
@@ -1514,7 +1514,7 @@ footer>div> div:first-child{
     .feat .products{
         height: 45vh;
         width: 85%;
-        border-radius: 30px 0 0 30px;
+        border-radius: 30px;
         overflow-x: scroll;
         align-items: flex-start;
         justify-content: flex-start;

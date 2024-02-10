@@ -10,7 +10,22 @@
     <script src="login.js" defer></script>
 </head>
 
-<body>
+<body style="position:relative">
+    <div class="side-bar">
+        <div class="closebtn">
+            <img src="./assets/menu-close.svg" data-close-menu class="" alt="">
+        </div>
+        <div class="menu">
+            <div id="logo">
+                <h3>parcel</h3>
+            </div>
+            <a href="men.html">men</a>
+            <a href="women.html">women</a>
+            <a href="#">accessories</a>
+            <a href="#">cart</a>
+            <a href="login.html">Account</a>
+        </div>
+    </div>
     <header>
         <nav>
             <div class="logo">
@@ -18,8 +33,8 @@
             </div>
             <div class="center-nav">
                 <li>
-                    <ul class="hover ">
-                        <a href="index.html">home</a>
+                    <ul class="hover">
+                        <a href="#home">home</a>
                     </ul>
                     <ul class="hover">
                         <a href="men.html">Men</a>
@@ -32,23 +47,25 @@
                     </ul>
                 </li>
             </div>
-            <div class="right-nav">
-                <input type="text" placeholder="search PARCEL">
-                <button type="submit"><img loading="lazy" src="assets/search.svg" alt="search button"></button>
-            </div>
             <div class="cart">
                 <div id="profile">
-                    <a href="login.html" target="_blank" class="profile"><img loading="lazy" src="assets/login.svg"
-                            alt="">profile</a>
+                    <a href="login.html" class="profile"><img loading="lazy" src="assets/login.svg" alt=""></a>
                     <li data-profile class="hvr ">
-                        <ul><a href="">login/signup</a></ul>
+                        <ul><a href="login.html">login/signup</a></ul>
                         <ul><a href="">orders</a></ul>
                         <ul><a href="">contact us</a></ul>
                         <ul><a href="">profile</a></ul>
                         <ul><a href="">profile</a></ul>
                     </li>
                 </div>
-                <a href="" target="_blank"><img loading="lazy" src="assets/cart.svg" alt="cart">cart</a>
+                <a href="" target="_blank" id="cart">
+                    <img loading="lazy" src="assets/cart.svg" alt="cart">
+                </a>
+            </div>
+            <div class="right-nav">
+                <div class="btn">
+                    <img src="./assets/menu-open.svg" data-open-menu alt="">
+                </div>
             </div>
         </nav>
     </header>
