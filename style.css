@@ -1159,7 +1159,7 @@ footer>div> div:first-child{
 
 /* small screen sizes devices */
 
-@media screen and (319px < width < 426px) {
+@media screen and (319px < width < 473px) {
     
 
     *{
@@ -1512,8 +1512,8 @@ footer>div> div:first-child{
     }
 
     .feat .products{
-        height: 45vh;
-        width: 85%;
+        height: 338px;
+        max-width: 331px;
         border-radius: 30px;
         overflow-x: scroll;
         align-items: flex-start;
@@ -1673,6 +1673,530 @@ footer>div> div:first-child{
     }
 }
 
-
-
 /* small screen sizes devices */
+
+/* mid screen sizes devices */
+
+@media screen and (472px < width < 621px) {
+    
+
+    *{
+        user-select: none;
+    }
+    
+    .hide{
+        display: none;
+    }
+    
+    
+    html,
+    body{
+        height: 100dvh;
+    }
+
+    /* header & navbar section */
+
+    header,
+    nav{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    .center-nav,
+    .cart{
+        display: none;
+    }
+
+    .logo{
+        height: 50%;
+        width: 30%;
+    }
+
+    .logo a{
+        font-size: clamp(1.8rem, 2rem, 2.5rem);
+        background-color: transparent;
+        color: #74bac0;
+    }
+
+    .right-nav{
+        width: 15%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    
+    .btn img{
+        height: 50%;
+        object-fit: contain;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .side-bar{
+        height: 110dvh;
+        width: 67%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: -2px 14px 12px 8px rgba(128, 128, 128, 0.224);
+        transform: translateX(100%);
+        transition: .15s linear all;
+    }
+
+    .closebtn{
+        height: 60px;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closebtn img{
+        height: 50%;
+    }
+
+    .menu{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+        gap: 2rem;
+        overflow: scroll;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: #555;
+        font-size: clamp(1vw, 3.2vw, 4vw);
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        font-weight: 100;
+        letter-spacing: 1px;
+        font-family: "Poppins", montserrat;
+    }
+    
+    .menu h3{
+        text-transform: uppercase;
+        font-family: "Poppins", montserrat;
+        font-weight: 800;
+        color: black;
+        font-size: clamp(3vw, 3.6vw, 5vw);
+        letter-spacing: .5px;
+    }
+
+    #logo{
+        width: 100%;
+        display: flex;
+        margin: 1vh 0;
+        justify-content: center;
+    }
+
+    #logo h3{
+        font-family: 'righteous', gilroy;
+        font-size: clamp(2rem, 3rem, 4rem);
+        background-color: #74bac0;
+        color: white;
+        font-weight: 100;
+        padding: 0 5px;
+        letter-spacing: 2px;
+    }
+
+
+
+    /* header & navbar section */
+
+    #home{
+        width: 100%;
+        position: relative;
+        padding-top: 30px;
+        transition: .15s all linear;
+    }
+
+    .hero{
+        min-height: calc(120dvh - 60px);
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .hero > div {
+        min-height: 50%;
+    }
+
+    .hero  #text{
+        min-height: max-content;
+        width: 100%;
+        justify-content: none;
+        align-items: center;
+        padding-left: 3vh;
+        gap: 1.4rem;
+        margin-bottom: 2vh;
+    }
+
+    #text > *{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #text h3{
+        font-size: clamp(4vw, 5.4vw, 6.7vw);
+        width: 100%;
+    }
+
+    #text h1{
+        font-size: clamp(7vw, 10vw, 12vw);
+    }
+
+    #text h4{
+        font-size: clamp(2vw, 2.5vw, 4.1vw);
+        width: 80%;
+        text-align: center;
+        border: none;
+    }
+
+    #text a{
+        font-size: clamp(1.3vh, 2.4vh, 4.1vh);
+        padding: 0px 15px;
+        border-radius: 30px;
+    }
+
+    #image{
+        width: 100%;
+        height: 60%;
+    }
+
+    #image h2{
+        display: none;
+    }
+
+    #image img{
+        max-height: 105%;
+    }
+
+    .banner-container{
+        display: none;
+    }
+
+    .section-2{
+        min-height: 100dvh;
+    }
+
+    .top{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 60vmin;
+        min-width: 50vmin;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-bottom: 5vh;
+    }
+
+    .top > div{
+        width: 50%;
+        height: 50%;
+        border: none;
+        padding: 0 10px;
+    }
+
+    .top > div:nth-child(1){
+        border-right: 2px solid whitesmoke;
+        border-bottom: 2px solid whitesmoke;
+    }
+
+    .top > div:nth-child(2){
+        border-bottom: 2px solid whitesmoke;
+    }
+
+    .top > div:nth-child(3){
+        border-right: 2px solid whitesmoke;
+    }
+
+    .top > div span{
+        font-size: clamp(1.2vh, 1.9vh, 2vh);
+        text-align: center;
+    }
+
+    .hero-2>div > h1 {
+        font-size: clamp(2.5vh, 4vh, 5vh);
+    }
+
+    .hero-2>div > h3 {
+        font-size: clamp(2.1vh, 3vh, 4.0vh);
+    }
+
+    .featured{
+        overflow-x: auto;
+        padding-left: 2vh;
+        justify-content: flex-start;
+        margin: 5vh 0;
+    }
+
+    .featured::-webkit-scrollbar{
+        display: none;
+    }
+
+    .featured > div{
+        height: 15rem;
+        width: 15rem;
+        margin: 0 2vh;
+        flex-shrink: 0;
+    }
+
+
+    .featured div>a{
+        height: 100%;
+        width: 100%;
+    }
+
+    .featured div>a> #adidas{
+        height: 10rem;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .featured div>a> #asics{
+        height: 3.5rem;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .featured div>a> #puma{
+        height: 12rem;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .featured div>a> #campus{
+        height: 1.6rem;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .featured div>a> #nike{
+        height: 8rem;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .featured>div h3{
+        font-size: clamp(1.8vh, 1.9vh, 2.3vh);
+    }
+
+    .feat{
+        min-height: 50vh;
+        flex-direction: column;
+        width: 100%;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .feat .model{
+        width: 100%;
+        height: 20%;
+        display: flex;
+    }
+
+    .feat .model .text-for-image{
+        font-size: clamp(5.1vh, 5.6vh, 7vh);
+        background: linear-gradient(to top right,#74bac0  0%, 50% , royalblue 90% );
+        font-family: 'righteous',montserrat;
+        color: transparent;
+        background-clip: text;
+        display: inline-block;
+    }
+
+    .feat .model img{
+        display: none;
+    }
+
+    .feat .products{
+        height: 70vmin;
+        width: 70%;
+        border-radius: 30px;
+        overflow-x: scroll;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .feat .products::-webkit-scrollbar{
+        display: none;
+    }
+
+    .feat .products > div{
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+    }
+
+    .products div > div{
+        height: 60%;
+        width: 50%;
+        border-radius: 30px;
+    } 
+
+    .products>div>h3{
+        font-size: clamp(2vh, 2.7vh, 3.7vh);
+    }
+    
+    .products>div>a{
+        font-size: clamp(2vh, 2.5vh, 2.7vh);
+        border-radius: 30px;
+        padding: 7px 12px;
+    }
+
+    .products >div >div  img{
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+    }
+
+    #hoodie img{
+        height: 110%;
+        width: 110%;
+
+    }
+
+    .category > div:first-child{
+        margin: 8vh 0 2vh 0;
+    }
+
+    .category h1{
+        font-size: clamp(3vh, 4.7vh, 5.7vh);
+    }
+
+    .items{
+        gap: 3rem 1.5rem;
+        padding: 0 1rem;
+        width: 100%;
+    }
+
+    .item{
+        height: 55vmin;
+        width: 40.8vmin;
+        max-height: 250px;
+        max-width: 180px;
+        border-radius: 5px;
+    }
+
+    .item a h3{
+        font-size: clamp(2vh, 2.15vh, 2.4vh);
+    }
+    
+    .item a h3 span{
+        display: none;
+    }
+
+    .section-4{
+        min-height: 80vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .left,
+    .right{
+        width: 100%;
+        height: 50%;
+        border-radius: 0px;
+        margin: 0;
+    }
+
+    .section-4>div a span{
+        bottom: 4vh;
+    }
+
+    .section-4>div a span h5{
+        font-size: clamp(2vh, 2.15vh, 2.4vh);
+        font-weight: 600;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .online-shop{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+        place-content: flex-start;
+        padding: 0 1rem ;
+    }
+
+    .head{
+        height: 50%;
+        width: 100%;
+        grid-column: span 2;
+    }
+
+    .policy{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        place-content: flex-start ;
+        padding: 0 1rem ;
+        gap: 1rem;
+        grid-template-rows: auto auto auto;
+    }
+
+    .policy>div:first-child{
+        grid-column: span 3;
+    }
+
+    .policy>div a{
+        white-space: nowrap;
+    }
+
+    .playstore{
+        display: none;
+    }
+
+    .original{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+
+    .original > div{
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .copyright{
+        font-weight: 100;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+}
+
+/* mid screen sizes devices */
+
