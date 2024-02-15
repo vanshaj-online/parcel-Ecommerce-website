@@ -40,15 +40,17 @@
     background-color: #639fa5;
 }
 
-*:focus{
+*:focus {
     outline: none;
 }
 
-img::selection{
+img::selection {
     background-color: transparent;
 }
 
-html{scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -56,10 +58,12 @@ body {
     width: 100%;
     background-color: white;
 }
-body{
-    transition: filter .2s linear,background .2s;
+
+body {
+    transition: filter .2s linear, background .2s;
 }
-img{
+
+img {
     -webkit-user-drag: none;
 }
 
@@ -113,7 +117,7 @@ nav {
     background-color: #74bac0;
     overflow: hidden;
     text-transform: uppercase;
-    font-size: clamp(1.3vw,1.4vw, 1.5vw);
+    font-size: clamp(1.3vw, 1.4vw, 1.5vw);
 }
 
 
@@ -179,7 +183,7 @@ nav {
 }
 
 
-.hover .drop-down>ul> a {
+.hover .drop-down>ul>a {
     text-decoration: none;
     font-size: 1.2vw;
     color: grey;
@@ -198,7 +202,7 @@ nav {
     opacity: 1;
 }
 
-.right-nav input{
+.right-nav input {
     outline: none;
     border: none;
     padding: 0 2vh;
@@ -206,13 +210,13 @@ nav {
     border-radius: 7px;
     font-weight: 900;
     font-family: "Poppins";
-    width: min(80%,20vw);
+    width: min(80%, 20vw);
     box-shadow: 2px 2px 10px #b5b5b576,
-             -2px -2px 10px #ffffff;
+        -2px -2px 10px #ffffff;
     font-weight: 500;
 }
 
-.right-nav input::placeholder{
+.right-nav input::placeholder {
     font-size: clamp(1.3rem, 1.5rem, 1.5rem);
     text-transform: capitalize;
     letter-spacing: -.2px;
@@ -225,8 +229,8 @@ nav {
     padding: 0;
     background-color: rgb(212, 211, 211);
     display: flex;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-nav button img {
@@ -237,6 +241,7 @@ nav {
 .cart {
     width: 8%;
     justify-content: space-around;
+    gap: 1rem;
 }
 
 .cart a {
@@ -281,7 +286,7 @@ nav {
     opacity: 0;
     visibility: hidden;
     box-shadow: 5px 5px 17px #95959576,
-             -5px -5px 17px #ffffff;
+        -5px -5px 17px #ffffff;
 }
 
 .cart #profile li:hover {
@@ -352,7 +357,7 @@ main {
     margin-bottom: 10vh;
 }
 
-main > *{
+main>* {
     transition: .2s;
 }
 
@@ -386,7 +391,7 @@ main > *{
     gap: 2rem;
 }
 
-#text >*{
+#text>* {
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -448,7 +453,7 @@ main > *{
 #image h2 {
     position: absolute;
     z-index: 2;
-    padding: 2vh;
+    padding: 10px;
     top: 20vh;
     left: 2vh;
     font-size: 2.5rem;
@@ -467,10 +472,11 @@ main > *{
     object-position: center;
 }
 
-.banner-container{
+.banner-container {
     width: 100%;
-    height: 70dvh;
+    min-height: 70dvh;
     padding: 7vh 0;
+    height: 70dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -478,8 +484,8 @@ main > *{
 
 
 
-.img-container{
-    width: 80%;
+.img-container {
+    width: 90%;
     height: 100%;
     display: flex;
     overflow: hidden;
@@ -487,7 +493,7 @@ main > *{
     position: relative;
 }
 
-.img-container button{
+.img-container button {
     position: absolute;
     top: 50%;
     z-index: 8;
@@ -501,12 +507,12 @@ main > *{
 }
 
 
-.img-container>button:last-child{
+.img-container>button:last-child {
     right: 0;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.105) 0%, transparent 90%);
 }
 
-.img-container button img{
+.img-container button img {
     width: 100%;
     display: block;
     position: absolute;
@@ -516,28 +522,31 @@ main > *{
     object-fit: contain;
 }
 
-.img-container button:active > img{
+.img-container button:active>img {
     transform: translateY(-50%) scale(.9);
 }
 
-.img-container::-webkit-scrollbar{
+.img-container::-webkit-scrollbar {
     display: none;
 }
 
-.img-container > .imgs{
+.img-container>.imgs {
     width: 100%;
     height: 100%;
     display: inline-block;
     position: relative;
 }
 
-.img-container img{
+.img-container img {
     width: 100%;
+    height: 100%;
     object-position: bottom;
-    object-fit: fill;
+    object-fit: cover;
     display: block;
     cursor: pointer;
     position: absolute;
+    bottom: 0;
+    left: 0;
     transition: .3s transform linear;
 }
 
@@ -585,7 +594,7 @@ main > *{
 }
 
 .top>div>img {
-    height: max(6vw,45%);
+    height: max(6vw, 45%);
 }
 
 .hero-2 {
@@ -604,11 +613,11 @@ main > *{
 
 .hero-2 div h1 {
     margin-bottom: 1vh;
-    font-size: clamp(3vw,3.6vw,4.5vw);
+    font-size: clamp(3vw, 3.6vw, 4.5vw);
 }
 
 .hero-2 div h3 {
-    font-size: clamp(2vw,2.6vw,3.5vw);
+    font-size: clamp(2vw, 2.6vw, 3.5vw);
 }
 
 .featured {
@@ -753,7 +762,8 @@ main > *{
     height: 11vw;
     object-fit: contain;
 }
-#hoodie img{
+
+#hoodie img {
     height: 13vw;
     top: 45%;
 }
@@ -802,12 +812,12 @@ main > *{
     flex-wrap: wrap;
 }
 
-.category>div:first-child{
+.category>div:first-child {
     margin: 6vh 0;
 }
 
 .category h1 {
-    font-size: clamp(4vw, 4.5vw,5vw);
+    font-size: clamp(4vw, 4.5vw, 5vw);
     font-family: couture;
     height: 8vh;
     font-weight: 900;
@@ -824,7 +834,7 @@ main > *{
     flex-wrap: wrap;
 }
 
-.item{
+.item {
     width: 15vmax;
     height: 20vmax;
     position: relative;
@@ -838,12 +848,12 @@ main > *{
     width: 100%;
     color: white;
     display: flex;
-    position: relative;   
+    position: relative;
 }
 
 .item:hover {
     box-shadow: 7px 7px 17px #adadad,
-                -7px -7px 17px #ffffff;
+        -7px -7px 17px #ffffff;
     transform: scale(1.01);
 }
 
@@ -873,7 +883,7 @@ main > *{
     font-family: 'cocogoose light';
     font-size: clamp(1vw, 1.1vw, 1.3vw);
     background-color: rgb(255, 117, 32);
-    padding:.8vh;
+    padding: .8vh;
     border-radius: 5px;
     margin-top: 1vh;
 }
@@ -887,11 +897,11 @@ main > *{
     aspect-ratio: 3/2;
 }
 
-.item.loaded > a > img{
+.item.loaded>a>img {
     opacity: 1;
 }
 
-.section-4{
+.section-4 {
     height: 40vw;
     width: 100%;
     margin: 10vh 0;
@@ -900,7 +910,8 @@ main > *{
     justify-content: space-evenly;
 }
 
-.right, .left{
+.right,
+.left {
     height: 30vw;
     width: 45%;
     border-radius: 30px;
@@ -908,14 +919,14 @@ main > *{
     display: inline-block;
 }
 
-.section-4>div a{
+.section-4>div a {
     height: 100%;
     width: 100%;
     display: flex;
     position: relative;
 }
 
-.section-4>div a img{
+.section-4>div a img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -925,18 +936,18 @@ main > *{
     -webkit-filter: brightness(.9);
 }
 
-.section-4>div:hover{
+.section-4>div:hover {
     box-shadow: 2px 2px 17px #828282,
-             -2px -2px 17px #ffffff;
+        -2px -2px 17px #ffffff;
     transition: .1s linear;
 }
 
-.section-4>div:hover > a img{
+.section-4>div:hover>a img {
     filter: brightness(1);
     -webkit-filter: brightness(1);
 }
 
-.section-4>div a span{
+.section-4>div a span {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -951,7 +962,7 @@ main > *{
     transform: translateX(-50%);
 }
 
-.section-4>div a span h5{
+.section-4>div a span h5 {
     color: black;
     background-color: rgba(255, 255, 255, 0.372);
     padding: 10px;
@@ -963,15 +974,15 @@ main > *{
     -webkit-backdrop-filter: blur(10px);
 }
 
-.section-4>div a span h5 svg{
+.section-4>div a span h5 svg {
     transition: .1s linear;
 }
 
-.section-4>div:hover > a span h5 svg{
+.section-4>div:hover>a span h5 svg {
     transform: translateX(8px);
 }
 
-.section-4 .for{
+.section-4 .for {
     background-color: white;
     font-weight: 900;
     color: black;
@@ -990,11 +1001,12 @@ footer {
     position: relative;
 }
 
-footer *{
+footer * {
     font-family: "Poppins", sans-serif;
 }
 
-.online-shop, .policy {
+.online-shop,
+.policy {
     min-height: 80%;
     width: fit-content;
     display: flex;
@@ -1002,13 +1014,13 @@ footer *{
     flex-direction: column;
 }
 
-footer>div>div{
+footer>div>div {
     margin-bottom: 1.5vh;
 }
 
 footer>div>div a {
     text-decoration: none;
-    font-size: clamp(1rem,1.4rem,1.8rem);
+    font-size: clamp(1rem, 1.4rem, 1.8rem);
     font-weight: 100;
     color: #858585;
     -webkit-font-smoothing: antialiased;
@@ -1016,14 +1028,14 @@ footer>div>div a {
     transition: color .2s linear;
 }
 
-footer>div>div a:hover{
+footer>div>div a:hover {
     color: #333;
 }
 
 footer>div>div:first-child a b,
 footer>div>div:first-child h6 b,
-footer>div> div:first-child, 
-#return h6 b{
+footer>div>div:first-child,
+#return h6 b {
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     font-size: clamp(1.2rem, 1.5rem, 1.8rem);
@@ -1032,81 +1044,87 @@ footer>div> div:first-child,
 }
 
 
-footer>div> div:first-child{
+footer>div>div:first-child {
     margin-bottom: 2vh;
     font-size: clamp(1.3rem, 1.6rem, 1.8rem);
 }
 
 
-.playstore, .original{
+.playstore,
+.original {
     width: 25%;
     min-height: 20vh;
 }
 
-#playstore a, #appstore a{
+#playstore a,
+#appstore a {
     overflow: hidden;
     border-radius: 8px;
     display: grid;
     place-content: center;
 }
 
-#appstore a img{
+#appstore a img {
     width: 8vw;
 }
-.playstore div{
+
+.playstore div {
     display: inline-block;
     font-weight: bold;
 }
-#playstore a img{
+
+#playstore a img {
     width: 9vw;
 }
 
-.original>div img{
+.original>div img {
     height: 3rem;
     margin-right: 1vh;
 }
 
-#return img{
+#return img {
     margin-right: 1vh;
     height: 3.3rem;
 }
 
-.original div{
+.original div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#original h6, #return h6{
+#original h6,
+#return h6 {
     color: #222;
     text-transform: uppercase;
 }
 
-#original h6 span, #return h6 span{
+#original h6 span,
+#return h6 span {
     text-transform: lowercase;
     color: #858585;
     font-weight: 100;
-    font-size: clamp(1.2rem,1.5rem,1.7rem);
+    font-size: clamp(1.2rem, 1.5rem, 1.7rem);
 }
 
-.social{
+.social {
     width: 70%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
 }
 
-.social div h4{
-    font-size: clamp(1.2rem,1.3rem,1.6rem);
+.social div h4 {
+    font-size: clamp(1.2rem, 1.3rem, 1.6rem);
 }
 
-.social div:last-child{
+.social div:last-child {
     width: 100%;
     height: 60%;
     display: flex;
 }
 
-.social div:last-child a{
+.social div:last-child a {
     width: fit-content;
     height: 100%;
     display: inline-block;
@@ -1116,13 +1134,13 @@ footer>div> div:first-child{
     margin-right: .5vh;
 }
 
-.social div:last-child a img{
+.social div:last-child a img {
     height: 1.8vw;
     object-fit: contain;
     object-position: center;
 }
 
-.copyright{
+.copyright {
     width: 100%;
     font-size: clamp(1rem, 1.1rem, 1.5rem);
     color: #555;
@@ -1139,17 +1157,18 @@ footer>div> div:first-child{
 
 /* mobile elements that are hidden in desktop */
 
-.right-nav{
+.right-nav {
     display: none;
 }
 
-.text-for-image{
+.text-for-image {
     display: none;
 }
 
-.side-bar{
+.side-bar {
     display: none;
 }
+
 /* mobile elements that are hidden in desktop */
 
 
@@ -1157,29 +1176,29 @@ footer>div> div:first-child{
 /* footer section */
 
 
-/* small screen sizes devices */
+/* small screen sized devices */
 
 @media screen and (319px < width < 473px) {
-    
 
-    *{
+
+    * {
         user-select: none;
     }
-    
-    .hide{
+
+    .hide {
         display: none;
     }
-    
-    
+
+
     html,
-    body{
+    body {
         height: 100dvh;
     }
 
     /* header & navbar section */
 
     header,
-    nav{
+    nav {
         height: 60px;
         width: 100%;
         display: flex;
@@ -1190,22 +1209,22 @@ footer>div> div:first-child{
     }
 
     .center-nav,
-    .cart{
+    .cart {
         display: none;
     }
 
-    .logo{
+    .logo {
         height: 50%;
         width: 40%;
     }
 
-    .logo a{
+    .logo a {
         font-size: clamp(1.8rem, 2rem, 2.5rem);
         background-color: transparent;
         color: #74bac0;
     }
 
-    .right-nav{
+    .right-nav {
         width: 20%;
         height: 100%;
         display: flex;
@@ -1213,22 +1232,22 @@ footer>div> div:first-child{
         justify-content: center;
     }
 
-    .btn{
+    .btn {
         height: 100%;
         width: 100%;
         position: relative;
     }
-    
-    .btn img{
+
+    .btn img {
         height: 50%;
         object-fit: contain;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
-    .side-bar{
+    .side-bar {
         height: 110dvh;
         width: 67%;
         position: fixed;
@@ -1244,7 +1263,7 @@ footer>div> div:first-child{
         transition: .15s linear all;
     }
 
-    .closebtn{
+    .closebtn {
         height: 60px;
         width: 30%;
         position: absolute;
@@ -1255,11 +1274,11 @@ footer>div> div:first-child{
         align-items: center;
     }
 
-    .closebtn img{
+    .closebtn img {
         height: 50%;
     }
 
-    .menu{
+    .menu {
         width: 90%;
         height: 90%;
         display: flex;
@@ -1268,7 +1287,7 @@ footer>div> div:first-child{
         gap: 2rem;
     }
 
-    .menu a{
+    .menu a {
         text-decoration: none;
         color: #555;
         font-size: clamp(2vw, 4.0vw, 5vw);
@@ -1277,8 +1296,8 @@ footer>div> div:first-child{
         font-weight: 100;
         font-family: "Poppins", montserrat;
     }
-    
-    .menu h3{
+
+    .menu h3 {
         text-transform: uppercase;
         font-family: "Poppins", montserrat;
         font-weight: 800;
@@ -1286,14 +1305,14 @@ footer>div> div:first-child{
         font-size: clamp(3vw, 4.6vw, 5vw);
     }
 
-    #logo{
+    #logo {
         width: 100%;
         display: flex;
         margin: 1vh 0;
         justify-content: center;
     }
 
-    #logo h3{
+    #logo h3 {
         font-family: 'righteous', gilroy;
         font-size: clamp(6vw, 7vw, 8.5vw);
         background-color: #74bac0;
@@ -1306,14 +1325,14 @@ footer>div> div:first-child{
 
     /* header & navbar section */
 
-    #home{
+    #home {
         width: 100%;
         position: relative;
-        padding-top:5vh ;
+        padding-top: 5vh;
         transition: .15s all linear;
     }
 
-    .hero{
+    .hero {
         min-height: calc(100dvh - 60px);
         display: flex;
         flex-direction: column;
@@ -1322,11 +1341,11 @@ footer>div> div:first-child{
         padding: 0;
     }
 
-    .hero > div {
+    .hero>div {
         min-height: 50%;
     }
 
-    .hero  #text{
+    .hero #text {
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
@@ -1335,56 +1354,56 @@ footer>div> div:first-child{
         margin-bottom: 2vh;
     }
 
-    #text > *{
+    #text>* {
         text-align: center;
         display: flex;
         justify-content: center;
     }
 
-    #text h3{
+    #text h3 {
         font-size: clamp(2vh, 2.5vh, 2.7vh);
         width: 100%;
     }
 
-    #text h1{
+    #text h1 {
         font-size: clamp(3vh, 6vh, 8vh);
     }
 
-    #text h4{
+    #text h4 {
         font-size: clamp(1.3vh, 1.8vh, 2.1vh);
         width: 100%;
         text-align: center;
         border: none;
     }
 
-    #text a{
+    #text a {
         font-size: clamp(1.3vh, 1.9vh, 2.1vh);
         padding: 0px 15px;
         border-radius: 30px;
     }
 
-    #image{
+    #image {
         width: 100%;
         height: 60%;
     }
 
-    #image h2{
+    #image h2 {
         display: none;
     }
 
-    #image img{
+    #image img {
         height: 100%;
     }
 
-    .banner-container{
+    .banner-container {
         display: none;
     }
 
-    .section-2{
+    .section-2 {
         min-height: 100dvh;
     }
 
-    .top{
+    .top {
         display: flex;
         flex-wrap: wrap;
         height: 30rem;
@@ -1394,51 +1413,51 @@ footer>div> div:first-child{
         margin-bottom: 5vh;
     }
 
-    .top > div{
+    .top>div {
         width: 50%;
         height: 50%;
         border: none;
         padding: 0 10px;
     }
 
-    .top > div:nth-child(1){
+    .top>div:nth-child(1) {
         border-right: 2px solid whitesmoke;
         border-bottom: 2px solid whitesmoke;
     }
 
-    .top > div:nth-child(2){
+    .top>div:nth-child(2) {
         border-bottom: 2px solid whitesmoke;
     }
 
-    .top > div:nth-child(3){
+    .top>div:nth-child(3) {
         border-right: 2px solid whitesmoke;
     }
 
-    .top > div span{
+    .top>div span {
         font-size: clamp(1.2vh, 1.9vh, 2vh);
         text-align: center;
     }
 
-    .hero-2>div > h1 {
+    .hero-2>div>h1 {
         font-size: clamp(2.5vh, 3.1vh, 3.6vh);
     }
 
-    .hero-2>div > h3 {
+    .hero-2>div>h3 {
         font-size: clamp(2.1vh, 2.5vh, 3.0vh);
     }
 
-    .featured{
+    .featured {
         overflow-x: auto;
         padding-left: 2vh;
         justify-content: flex-start;
         margin: 5vh 0;
     }
 
-    .featured::-webkit-scrollbar{
+    .featured::-webkit-scrollbar {
         display: none;
     }
 
-    .featured > div{
+    .featured>div {
         height: 15rem;
         width: 15rem;
         margin: 0 2vh;
@@ -1446,72 +1465,72 @@ footer>div> div:first-child{
     }
 
 
-    .featured div>a{
+    .featured div>a {
         height: 100%;
         width: 100%;
     }
 
-    .featured div>a> #adidas{
+    .featured div>a>#adidas {
         height: 10rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #asics{
+    .featured div>a>#asics {
         height: 3.5rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #puma{
+    .featured div>a>#puma {
         height: 12rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #campus{
+    .featured div>a>#campus {
         height: 1.6rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #nike{
+    .featured div>a>#nike {
         height: 8rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured>div h3{
+    .featured>div h3 {
         font-size: clamp(1.8vh, 1.9vh, 2.3vh);
     }
 
-    .feat{
+    .feat {
         min-height: 50vh;
         flex-direction: column;
         width: 100%;
         align-items: center;
     }
 
-    .feat .model{
+    .feat .model {
         width: 100%;
         height: 20%;
         display: flex;
     }
 
-    .feat .model .text-for-image{
+    .feat .model .text-for-image {
         font-size: clamp(5.1vh, 5.6vh, 7vh);
-        background: linear-gradient(to top right,#74bac0  0%, 50% , royalblue 90% );
-        font-family: 'righteous',montserrat;
+        background: linear-gradient(to top right, #74bac0 0%, 50%, royalblue 90%);
+        font-family: 'righteous', montserrat;
         color: transparent;
         background-clip: text;
         display: inline-block;
     }
 
-    .feat .model img{
+    .feat .model img {
         display: none;
     }
 
-    .feat .products{
+    .feat .products {
         height: 338px;
         max-width: 331px;
         border-radius: 30px;
@@ -1519,141 +1538,141 @@ footer>div> div:first-child{
         align-items: flex-start;
         justify-content: flex-start;
     }
-    
-    .feat .products::-webkit-scrollbar{
+
+    .feat .products::-webkit-scrollbar {
         display: none;
     }
 
-    .feat .products > div{
+    .feat .products>div {
         width: 100%;
         height: 100%;
         flex-shrink: 0;
     }
 
-    .products div > div{
+    .products div>div {
         height: 17rem;
         width: 17rem;
         border-radius: 30px;
-    } 
+    }
 
-    .products>div>h3{
+    .products>div>h3 {
         font-size: clamp(2vh, 2.5vh, 2.7vh);
     }
-    
-    .products>div>a{
+
+    .products>div>a {
         font-size: clamp(2vh, 2.5vh, 2.7vh);
         border-radius: 30px;
         padding: 5px 10px;
     }
 
-    .products >div >div  img{
+    .products>div>div img {
         height: 100%;
         object-fit: contain;
         object-position: center;
         width: 100%;
     }
 
-    #hoodie img{
+    #hoodie img {
         height: 110%;
         width: 110%;
 
     }
 
-    .category > div:first-child{
+    .category>div:first-child {
         margin: 8vh 0 2vh 0;
     }
 
-    .category h1{
+    .category h1 {
         font-size: clamp(3vh, 3.7vh, 4.7vh);
     }
 
-    .items{
+    .items {
         gap: 1rem;
         padding: 0 1rem;
         width: 100%;
     }
 
-    .item{
+    .item {
         height: 60vmin;
         width: 45.8vmin;
 
         border-radius: 5px;
     }
 
-    .item a h3{
+    .item a h3 {
         font-size: clamp(2vh, 2.15vh, 2.4vh);
     }
-    
-    .item a h3 span{
+
+    .item a h3 span {
         display: none;
     }
 
-    .section-4{
+    .section-4 {
         min-height: 60vh;
         width: 100%;
         display: flex;
         flex-direction: column;
-        
+
     }
 
     .left,
-    .right{
+    .right {
         width: 100%;
         height: 30vh;
         border-radius: 0px;
         margin: 0;
     }
 
-    .section-4>div a span{
+    .section-4>div a span {
         bottom: 4vh;
     }
 
-    .section-4>div a span h5{
+    .section-4>div a span h5 {
         font-size: clamp(2vh, 2.15vh, 2.4vh);
         font-weight: 600;
     }
 
-    footer{
+    footer {
         flex-direction: column;
     }
 
-    .online-shop{
+    .online-shop {
         display: grid;
         width: 100%;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: auto auto;
         place-content: flex-start;
-        padding: 0 1rem ;
+        padding: 0 1rem;
     }
 
-    .head{
+    .head {
         height: 50%;
         width: 100%;
         grid-column: span 2;
     }
 
-    .policy{
+    .policy {
         display: grid;
         grid-template-columns: repeat(3, auto);
-        place-content: flex-start ;
-        padding: 0 1rem ;
+        place-content: flex-start;
+        padding: 0 1rem;
         gap: 1rem;
         grid-template-rows: auto auto auto;
     }
 
-    .policy>div:first-child{
+    .policy>div:first-child {
         grid-column: span 3;
     }
 
-    .policy>div a{
+    .policy>div a {
         white-space: nowrap;
     }
 
-    .playstore{
+    .playstore {
         display: none;
     }
 
-    .original{
+    .original {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1661,43 +1680,43 @@ footer>div> div:first-child{
     }
 
 
-    .original > div{
+    .original>div {
         width: 100%;
         /* background-color: red; */
     }
 
-    .copyright{
+    .copyright {
         font-weight: 100;
         height: 3vh;
         align-items: center;
     }
 }
 
-/* small screen sizes devices */
+/* small screen sized devices */
 
-/* mid screen sizes devices */
+/* mid screen sized devices */
 
 @media screen and (472px < width < 621px) {
-    
 
-    *{
+
+    * {
         user-select: none;
     }
-    
-    .hide{
+
+    .hide {
         display: none;
     }
-    
-    
+
+
     html,
-    body{
+    body {
         height: 100dvh;
     }
 
     /* header & navbar section */
 
     header,
-    nav{
+    nav {
         height: 60px;
         width: 100%;
         display: flex;
@@ -1708,22 +1727,22 @@ footer>div> div:first-child{
     }
 
     .center-nav,
-    .cart{
+    .cart {
         display: none;
     }
 
-    .logo{
+    .logo {
         height: 50%;
         width: 30%;
     }
 
-    .logo a{
+    .logo a {
         font-size: clamp(1.8rem, 2rem, 2.5rem);
         background-color: transparent;
         color: #74bac0;
     }
 
-    .right-nav{
+    .right-nav {
         width: 15%;
         height: 100%;
         display: flex;
@@ -1731,22 +1750,22 @@ footer>div> div:first-child{
         justify-content: center;
     }
 
-    .btn{
+    .btn {
         height: 100%;
         width: 100%;
         position: relative;
     }
-    
-    .btn img{
+
+    .btn img {
         height: 50%;
         object-fit: contain;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
-    .side-bar{
+    .side-bar {
         height: 110dvh;
         width: 60%;
         position: fixed;
@@ -1762,7 +1781,7 @@ footer>div> div:first-child{
         transition: .15s linear all;
     }
 
-    .closebtn{
+    .closebtn {
         height: 60px;
         width: 30%;
         position: absolute;
@@ -1773,11 +1792,11 @@ footer>div> div:first-child{
         align-items: center;
     }
 
-    .closebtn img{
+    .closebtn img {
         height: 50%;
     }
 
-    .menu{
+    .menu {
         width: 90%;
         height: 90%;
         display: flex;
@@ -1787,7 +1806,7 @@ footer>div> div:first-child{
         overflow: scroll;
     }
 
-    .menu a{
+    .menu a {
         text-decoration: none;
         color: #555;
         font-size: clamp(1vw, 3.2vw, 4vw);
@@ -1797,8 +1816,8 @@ footer>div> div:first-child{
         letter-spacing: 1px;
         font-family: "Poppins", montserrat;
     }
-    
-    .menu h3{
+
+    .menu h3 {
         text-transform: uppercase;
         font-family: "Poppins", montserrat;
         font-weight: 800;
@@ -1807,14 +1826,14 @@ footer>div> div:first-child{
         letter-spacing: .5px;
     }
 
-    #logo{
+    #logo {
         width: 100%;
         display: flex;
         margin: 1vh 0;
         justify-content: center;
     }
 
-    #logo h3{
+    #logo h3 {
         font-family: 'righteous', gilroy;
         font-size: clamp(2rem, 3rem, 4rem);
         background-color: #74bac0;
@@ -1828,14 +1847,14 @@ footer>div> div:first-child{
 
     /* header & navbar section */
 
-    #home{
+    #home {
         width: 100%;
         position: relative;
         padding-top: 30px;
         transition: .15s all linear;
     }
 
-    .hero{
+    .hero {
         min-height: calc(120dvh - 60px);
         display: flex;
         flex-direction: column;
@@ -1844,11 +1863,11 @@ footer>div> div:first-child{
         padding: 0;
     }
 
-    .hero > div {
+    .hero>div {
         min-height: 50%;
     }
 
-    .hero  #text{
+    .hero #text {
         min-height: max-content;
         width: 100%;
         justify-content: none;
@@ -1858,56 +1877,56 @@ footer>div> div:first-child{
         margin-bottom: 2vh;
     }
 
-    #text > *{
+    #text>* {
         text-align: center;
         display: flex;
         justify-content: center;
     }
 
-    #text h3{
+    #text h3 {
         font-size: clamp(4vw, 5.4vw, 6.7vw);
         width: 100%;
     }
 
-    #text h1{
+    #text h1 {
         font-size: clamp(7vw, 10vw, 12vw);
     }
 
-    #text h4{
+    #text h4 {
         font-size: clamp(2vw, 2.5vw, 4.1vw);
         width: 80%;
         text-align: center;
         border: none;
     }
 
-    #text a{
+    #text a {
         font-size: clamp(1.3vh, 2.4vh, 4.1vh);
         padding: 0px 15px;
         border-radius: 30px;
     }
 
-    #image{
+    #image {
         width: 100%;
         height: 60%;
     }
 
-    #image h2{
+    #image h2 {
         display: none;
     }
 
-    #image img{
+    #image img {
         max-height: 105%;
     }
 
-    .banner-container{
+    .banner-container {
         display: none;
     }
 
-    .section-2{
+    .section-2 {
         min-height: 100dvh;
     }
 
-    .top{
+    .top {
         display: flex;
         flex-wrap: wrap;
         min-height: 60vmin;
@@ -1917,51 +1936,51 @@ footer>div> div:first-child{
         margin-bottom: 5vh;
     }
 
-    .top > div{
+    .top>div {
         width: 50%;
         height: 50%;
         border: none;
         padding: 0 10px;
     }
 
-    .top > div:nth-child(1){
+    .top>div:nth-child(1) {
         border-right: 2px solid whitesmoke;
         border-bottom: 2px solid whitesmoke;
     }
 
-    .top > div:nth-child(2){
+    .top>div:nth-child(2) {
         border-bottom: 2px solid whitesmoke;
     }
 
-    .top > div:nth-child(3){
+    .top>div:nth-child(3) {
         border-right: 2px solid whitesmoke;
     }
 
-    .top > div span{
+    .top>div span {
         font-size: clamp(1.2vh, 1.9vh, 2vh);
         text-align: center;
     }
 
-    .hero-2>div > h1 {
+    .hero-2>div>h1 {
         font-size: clamp(2.5vh, 4vh, 5vh);
     }
 
-    .hero-2>div > h3 {
+    .hero-2>div>h3 {
         font-size: clamp(2.1vh, 3vh, 4.0vh);
     }
 
-    .featured{
+    .featured {
         overflow-x: auto;
         padding-left: 2vh;
         justify-content: flex-start;
         margin: 5vh 0;
     }
 
-    .featured::-webkit-scrollbar{
+    .featured::-webkit-scrollbar {
         display: none;
     }
 
-    .featured > div{
+    .featured>div {
         height: 15rem;
         width: 15rem;
         margin: 0 2vh;
@@ -1969,46 +1988,46 @@ footer>div> div:first-child{
     }
 
 
-    .featured div>a{
+    .featured div>a {
         height: 100%;
         width: 100%;
     }
 
-    .featured div>a> #adidas{
+    .featured div>a>#adidas {
         height: 10rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #asics{
+    .featured div>a>#asics {
         height: 3.5rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #puma{
+    .featured div>a>#puma {
         height: 12rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #campus{
+    .featured div>a>#campus {
         height: 1.6rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #nike{
+    .featured div>a>#nike {
         height: 8rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured>div h3{
+    .featured>div h3 {
         font-size: clamp(1.8vh, 1.9vh, 2.3vh);
     }
 
-    .feat{
+    .feat {
         min-height: 50vh;
         flex-direction: column;
         width: 100%;
@@ -2016,26 +2035,26 @@ footer>div> div:first-child{
         align-items: center;
     }
 
-    .feat .model{
+    .feat .model {
         width: 100%;
         height: 20%;
         display: flex;
     }
 
-    .feat .model .text-for-image{
+    .feat .model .text-for-image {
         font-size: clamp(5.1vh, 5.6vh, 7vh);
-        background: linear-gradient(to top right,#74bac0  0%, 50% , royalblue 90% );
-        font-family: 'righteous',montserrat;
+        background: linear-gradient(to top right, #74bac0 0%, 50%, royalblue 90%);
+        font-family: 'righteous', montserrat;
         color: transparent;
         background-clip: text;
         display: inline-block;
     }
 
-    .feat .model img{
+    .feat .model img {
         display: none;
     }
 
-    .feat .products{
+    .feat .products {
         height: 70vmin;
         width: 70%;
         border-radius: 30px;
@@ -2043,61 +2062,61 @@ footer>div> div:first-child{
         align-items: flex-start;
         justify-content: flex-start;
     }
-    
-    .feat .products::-webkit-scrollbar{
+
+    .feat .products::-webkit-scrollbar {
         display: none;
     }
 
-    .feat .products > div{
+    .feat .products>div {
         width: 100%;
         height: 100%;
         flex-shrink: 0;
     }
 
-    .products div > div{
+    .products div>div {
         height: 60%;
         width: 50%;
         border-radius: 30px;
-    } 
+    }
 
-    .products>div>h3{
+    .products>div>h3 {
         font-size: clamp(2vh, 2.7vh, 3.7vh);
     }
-    
-    .products>div>a{
+
+    .products>div>a {
         font-size: clamp(2vh, 2.5vh, 2.7vh);
         border-radius: 30px;
         padding: 7px 12px;
     }
 
-    .products >div >div  img{
+    .products>div>div img {
         height: 100%;
         object-fit: contain;
         object-position: center;
         width: 100%;
     }
 
-    #hoodie img{
+    #hoodie img {
         height: 110%;
         width: 110%;
 
     }
 
-    .category > div:first-child{
+    .category>div:first-child {
         margin: 8vh 0 2vh 0;
     }
 
-    .category h1{
+    .category h1 {
         font-size: clamp(3vh, 4.7vh, 5.7vh);
     }
 
-    .items{
+    .items {
         gap: 3rem 1.5rem;
         padding: 0 1rem;
         width: 100%;
     }
 
-    .item{
+    .item {
         height: 55vmin;
         width: 40.8vmin;
         max-height: 250px;
@@ -2105,80 +2124,80 @@ footer>div> div:first-child{
         border-radius: 5px;
     }
 
-    .item a h3{
+    .item a h3 {
         font-size: clamp(2vh, 2.15vh, 2.4vh);
     }
-    
-    .item a h3 span{
+
+    .item a h3 span {
         display: none;
     }
 
-    .section-4{
+    .section-4 {
         min-height: 80vh;
         width: 100%;
         display: flex;
         flex-direction: column;
-        
+
     }
 
     .left,
-    .right{
+    .right {
         width: 100%;
         height: 50%;
         border-radius: 0px;
         margin: 0;
     }
 
-    .section-4>div a span{
+    .section-4>div a span {
         bottom: 4vh;
     }
 
-    .section-4>div a span h5{
+    .section-4>div a span h5 {
         font-size: clamp(2vh, 2.15vh, 2.4vh);
         font-weight: 600;
     }
 
-    footer{
+    footer {
         flex-direction: column;
     }
 
-    .online-shop{
+    .online-shop {
         display: grid;
         width: 100%;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: auto auto;
         place-content: flex-start;
-        padding: 0 1rem ;
+        padding: 0 1rem;
     }
 
-    .head{
+    .head {
         height: 50%;
         width: 100%;
         grid-column: span 2;
     }
 
-    .policy{
+    .policy {
         display: grid;
         grid-template-columns: repeat(3, auto);
-        place-content: flex-start ;
-        padding: 0 1rem ;
+        place-content: flex-start;
+        padding: 0 1rem;
         gap: 1rem;
         grid-template-rows: auto auto auto;
     }
 
-    .policy>div:first-child{
+    .policy>div:first-child {
         grid-column: span 3;
     }
 
-    .policy>div a{
+    .policy>div a {
         white-space: nowrap;
     }
 
-    .playstore{
+    .playstore {
         display: none;
     }
 
-    .original{
+    .original {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -2186,46 +2205,46 @@ footer>div> div:first-child{
     }
 
 
-    .original > div{
+    .original>div {
         width: 100%;
         /* background-color: red; */
     }
 
-    .copyright{
+    .copyright {
         font-weight: 100;
         align-items: center;
         font-size: 1.3rem;
     }
 }
 
-/* mid screen sizes devices */
+/* mid screen sized devices */
 
 
 
 
-/* large screen sizes devices */
+/* large screen sized devices */
 
 @media screen and (620px < width < 741px) {
-    
 
-    *{
+
+    * {
         user-select: none;
     }
-    
-    .hide{
+
+    .hide {
         display: none;
     }
-    
-    
+
+
     html,
-    body{
+    body {
         height: 100dvh;
     }
 
     /* header & navbar section */
 
     header,
-    nav{
+    nav {
         height: 60px;
         width: 100%;
         display: flex;
@@ -2235,22 +2254,22 @@ footer>div> div:first-child{
     }
 
     .center-nav,
-    .cart{
+    .cart {
         display: none;
     }
 
-    .logo{
+    .logo {
         height: 50%;
         width: 30%;
     }
 
-    .logo a{
+    .logo a {
         font-size: clamp(1.8rem, 2rem, 2.5rem);
         background-color: transparent;
         color: #74bac0;
     }
 
-    .right-nav{
+    .right-nav {
         width: 15%;
         height: 100%;
         display: flex;
@@ -2258,22 +2277,22 @@ footer>div> div:first-child{
         justify-content: center;
     }
 
-    .btn{
+    .btn {
         height: 100%;
         width: 100%;
         position: relative;
     }
-    
-    .btn img{
+
+    .btn img {
         height: 50%;
         object-fit: contain;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
-    .side-bar{
+    .side-bar {
         height: 110dvh;
         width: 50%;
         position: fixed;
@@ -2289,7 +2308,7 @@ footer>div> div:first-child{
         transition: .15s linear all;
     }
 
-    .closebtn{
+    .closebtn {
         height: 60px;
         width: 30%;
         position: absolute;
@@ -2300,11 +2319,11 @@ footer>div> div:first-child{
         align-items: center;
     }
 
-    .closebtn img{
+    .closebtn img {
         height: 50%;
     }
 
-    .menu{
+    .menu {
         width: 90%;
         height: 90%;
         display: flex;
@@ -2314,7 +2333,7 @@ footer>div> div:first-child{
         overflow: scroll;
     }
 
-    .menu a{
+    .menu a {
         text-decoration: none;
         color: #555;
         font-size: clamp(2vw, 2.6vw, 3vw);
@@ -2324,8 +2343,8 @@ footer>div> div:first-child{
         letter-spacing: 1px;
         font-family: "Poppins", montserrat;
     }
-    
-    .menu h3{
+
+    .menu h3 {
         text-transform: uppercase;
         font-family: "Poppins", montserrat;
         font-weight: 800;
@@ -2334,14 +2353,14 @@ footer>div> div:first-child{
         letter-spacing: .5px;
     }
 
-    #logo{
+    #logo {
         width: 100%;
         display: flex;
         margin: 1vh 0;
         justify-content: center;
     }
 
-    #logo h3{
+    #logo h3 {
         font-family: 'righteous', gilroy;
         font-size: clamp(2vw, 4vw, 5vw);
         background-color: #74bac0;
@@ -2355,13 +2374,13 @@ footer>div> div:first-child{
 
     /* header & navbar section */
 
-    #home{
+    #home {
         width: 100%;
         position: relative;
         transition: .15s all linear;
     }
 
-    .hero{
+    .hero {
         height: max-content;
         display: flex;
         margin: 0;
@@ -2371,11 +2390,11 @@ footer>div> div:first-child{
         margin-bottom: 5rem;
     }
 
-    .hero > div {
+    .hero>div {
         min-height: 80%;
     }
 
-    .hero  #text{
+    .hero #text {
         min-height: max-content;
         width: 55%;
         justify-content: none;
@@ -2384,54 +2403,54 @@ footer>div> div:first-child{
         gap: 2rem;
     }
 
-    #text > *{
+    #text>* {
         text-align: left;
         display: flex;
         justify-content: flex-start;
         width: 100%;
     }
 
-    #text h3{
+    #text h3 {
         font-size: clamp(3vw, 3.6vw, 6.7vw);
         width: max-content;
     }
 
-    #text h1{
+    #text h1 {
         font-size: clamp(5vw, 6.6vw, 8vw);
     }
 
-    #text h4{
+    #text h4 {
         font-size: clamp(1vw, 2vw, 4.1vw);
         width: 80%;
     }
 
-    #text a{
+    #text a {
         font-size: clamp(2vw, 2.3vw, 4.1vw);
         padding: 0px 9px;
     }
 
-    #image{
+    #image {
         width: 40%;
         height: max-content;
     }
 
-    #image h2{
+    #image h2 {
         display: none;
     }
 
-    #image img{
+    #image img {
         max-height: 100%;
     }
 
-    .banner-container{
+    .banner-container {
         display: none;
     }
 
-    .section-2{
+    .section-2 {
         min-height: 100dvh;
     }
 
-    .top{
+    .top {
         display: flex;
         min-width: 80%;
         height: 20vw;
@@ -2440,7 +2459,7 @@ footer>div> div:first-child{
         margin-bottom: 5vh;
     }
 
-    .top > div{
+    .top>div {
         width: 25%;
         height: 100%;
         border: none;
@@ -2448,35 +2467,35 @@ footer>div> div:first-child{
         border-right: 2px solid whitesmoke;
     }
 
-    .top > div span{
+    .top>div span {
         font-size: clamp(1.2vh, 1.9vh, 2vh);
         text-align: center;
     }
 
-    .top div img{
+    .top div img {
         width: 50%;
     }
 
-    .hero-2>div > h1 {
+    .hero-2>div>h1 {
         font-size: clamp(2.5vh, 4vh, 5vh);
     }
 
-    .hero-2>div > h3 {
+    .hero-2>div>h3 {
         font-size: clamp(2.1vh, 3vh, 4.0vh);
     }
 
-    .featured{
+    .featured {
         overflow-x: auto;
         padding-left: 2vh;
         justify-content: flex-start;
         margin: 5vh 0;
     }
 
-    .featured::-webkit-scrollbar{
+    .featured::-webkit-scrollbar {
         display: none;
     }
 
-    .featured > div{
+    .featured>div {
         height: 15rem;
         width: 15rem;
         margin: 0 2vh;
@@ -2484,46 +2503,46 @@ footer>div> div:first-child{
     }
 
 
-    .featured div>a{
+    .featured div>a {
         height: 100%;
         width: 100%;
     }
 
-    .featured div>a> #adidas{
+    .featured div>a>#adidas {
         height: 10rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #asics{
+    .featured div>a>#asics {
         height: 3.5rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #puma{
+    .featured div>a>#puma {
         height: 12rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #campus{
+    .featured div>a>#campus {
         height: 1.6rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured div>a> #nike{
+    .featured div>a>#nike {
         height: 8rem;
         object-position: center;
         object-fit: cover;
     }
 
-    .featured>div h3{
+    .featured>div h3 {
         font-size: clamp(1.8vh, 1.9vh, 2.3vh);
     }
 
-    .feat{
+    .feat {
         min-height: 50vh;
         flex-direction: column;
         width: 100%;
@@ -2531,26 +2550,26 @@ footer>div> div:first-child{
         align-items: flex-end;
     }
 
-    .feat .model{
+    .feat .model {
         width: 100%;
         height: 20%;
         display: flex;
     }
 
-    .feat .model .text-for-image{
+    .feat .model .text-for-image {
         font-size: clamp(5.1vh, 5.6vh, 7vh);
-        background: linear-gradient(to top right,#74bac0  0%, 50% , royalblue 90% );
-        font-family: 'righteous',montserrat;
+        background: linear-gradient(to top right, #74bac0 0%, 50%, royalblue 90%);
+        font-family: 'righteous', montserrat;
         color: transparent;
         background-clip: text;
         display: inline-block;
     }
 
-    .feat .model img{
+    .feat .model img {
         display: none;
     }
 
-    .feat .products{
+    .feat .products {
         height: 50vmin;
         width: 80%;
         border-radius: 30px 0 0 30px;
@@ -2558,61 +2577,61 @@ footer>div> div:first-child{
         align-items: flex-start;
         justify-content: flex-start;
     }
-    
-    .feat .products::-webkit-scrollbar{
+
+    .feat .products::-webkit-scrollbar {
         display: none;
     }
 
-    .feat .products > div{
+    .feat .products>div {
         width: 50%;
         height: 100%;
         flex-shrink: 0;
     }
 
-    .products div > div{
+    .products div>div {
         height: 60%;
         width: 65%;
         border-radius: 30px;
-    } 
+    }
 
-    .products>div>h3{
+    .products>div>h3 {
         font-size: clamp(2vh, 2.7vh, 3.7vh);
     }
-    
-    .products>div>a{
+
+    .products>div>a {
         font-size: clamp(2vh, 2.5vh, 2.7vh);
         border-radius: 30px;
         padding: 7px 12px;
     }
 
-    .products >div >div  img{
+    .products>div>div img {
         height: 100%;
         object-fit: contain;
         object-position: center;
         width: 100%;
     }
 
-    #hoodie img{
+    #hoodie img {
         height: 110%;
         width: 110%;
 
     }
 
-    .category > div:first-child{
+    .category>div:first-child {
         margin: 8vh 0 2vh 0;
     }
 
-    .category h1{
+    .category h1 {
         font-size: clamp(3vh, 4.7vh, 5.7vh);
     }
 
-    .items{
+    .items {
         gap: 3rem 1.5rem;
         padding: 0 1rem;
         width: 100%;
     }
 
-    .item{
+    .item {
         height: 55vmin;
         width: 40.8vmin;
         max-height: 230px;
@@ -2620,88 +2639,88 @@ footer>div> div:first-child{
         border-radius: 5px;
     }
 
-    .item a h3{
+    .item a h3 {
         font-size: clamp(2vh, 2.15vh, 2.4vh);
     }
-    
-    .item a h3 span{
+
+    .item a h3 span {
         display: none;
     }
 
-    .section-4{
+    .section-4 {
         min-height: 100dvh;
         width: 100%;
         display: flex;
         flex-direction: column;
-        
+
     }
 
     .left,
-    .right{
+    .right {
         width: 100%;
         min-height: 350px;
         border-radius: 0px;
         margin: 0;
     }
 
-    .section-4 div a img{
+    .section-4 div a img {
         object-position: top;
     }
 
-    .section-4>div a span{
+    .section-4>div a span {
         bottom: 4vh;
     }
 
-    .section-4>div a span h5{
+    .section-4>div a span h5 {
         font-size: clamp(2vh, 2.15vh, 2.4vh);
         font-weight: 600;
     }
 
-    footer{
+    footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
 
-    .online-shop{
+    .online-shop {
         display: grid;
         width: 100%;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: auto auto;
         place-content: flex-start;
-        padding: 0 1rem ;
+        padding: 0 1rem;
     }
 
-    .head{
+    .head {
         height: 100%;
         width: 100%;
         grid-column: span 2;
     }
 
-    .policy{
+    .policy {
         display: grid;
         grid-template-columns: repeat(3, auto);
-        place-content: flex-start ;
-        padding: 0 1rem ;
+        place-content: flex-start;
+        padding: 0 1rem;
         width: 100%;
         gap: 1rem;
         grid-row: span 2;
         grid-template-rows: auto auto auto;
     }
 
-    .policy>div:first-child{
+    .policy>div:first-child {
         grid-column: span 3;
     }
 
-    .policy>div a{
+    .policy>div a {
         white-space: nowrap;
     }
 
-    .playstore{
+    .playstore {
         display: none;
     }
 
-    .original{
+    .original {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -2710,17 +2729,167 @@ footer>div> div:first-child{
     }
 
 
-    .original > div{
+    .original>div {
         width: 100%;
         /* background-color: red; */
     }
 
-    .copyright{
+    .copyright {
         font-weight: 100;
         align-items: center;
         font-size: 1.3rem;
     }
 }
 
-/* large screen sizes devices */
+/* large screen sized devices */
 
+/* extra large screen sized */
+
+@media screen and (740px < width < 1024px) {
+
+    .logo {
+        width: max-content;
+    }
+
+    .logo a {
+        font-size: clamp(2vw, 2.6vw, 3vw);
+        height: max-content;
+        width: max-content;
+    }
+
+    .center-nav {
+        width: max-content;
+    }
+
+    .center-nav li {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .cart a img {
+        height: 3vw;
+        color: rgb(152, 152, 152);
+
+    }
+
+    .hero {
+        height: calc(100dvh - 60px);
+        padding-top: 50px;
+        align-items: flex-start;
+        margin: 0 5% 5vh 5%;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .hero>div {
+        min-height: 80%;
+    }
+
+    .hero #text {
+        min-height: 80%;
+        padding: 0 3.6vh;
+        display: flex;
+        width: 55%;
+        gap: 2rem;
+    }
+
+    #text h3 {
+        font-size: clamp(2vw, 2.7vw, 5vw);
+    }
+
+    #text h1 {
+        font-size: clamp(4vw, 6.1vw, 8vw);
+    }
+
+    #text h4 {
+        font-size: clamp(1.0vw, 1.5vw, 3vw);
+        width: 85%;
+    }
+
+    #text a {
+        font-size: clamp(1vw, 1.4vw, 2vw);
+    }
+
+    #image h2{
+        font-size: clamp(2vw, 2.4vw, 4vw);
+    }
+
+    .top {
+        width: 80%;
+    }
+
+    .top div {
+        gap: 1.5rem;
+    }
+
+    .top>div>span {
+        font-size: clamp(1.1vw, 1.7vw, 2vw);
+        text-align: center;
+        width: 80%;
+    }
+
+    .feat {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .featured>div h3 {
+        font-size: clamp(1.3vw, 1.6vw, 2vw);
+    }
+
+    .feat .products {
+        height: 30vw;
+    }
+
+    .products>div>h3 {
+        font-size: clamp(1.5vw, 1.9vw, 2.4vw);
+    }
+
+    .products>div>a {
+        font-size: clamp(1.5vw, 1.9vw, 2.4vw);
+    }
+
+    .item {
+        width: 18rem;
+        height: 22rem;
+    }
+
+    .item a h3 {
+        font-size: clamp(1.3vw, 1.6vw, 1.7vw);
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    footer>div>div:first-child a b,
+    footer>div>div:first-child h6 b,
+    footer>div>div:first-child,
+    #return h6 b {
+        font-size: clamp(1.2vw, 1.6vw, 1.8vw);
+    }
+
+    .head{
+        margin-bottom: 0;
+    }
+
+    footer > div{
+        gap: 1rem;
+        min-height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .online-shop{
+        height: min-content;
+    }
+
+    footer>div>div{
+        margin: 0;
+    }
+
+}
+
+/* extra large screen sized */
