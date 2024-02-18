@@ -1351,6 +1351,7 @@ footer>div>div:first-child {
         align-items: center;
         padding-left: 3vh;
         gap: 2rem;
+        min-height: max-content;
         margin-bottom: 2vh;
     }
 

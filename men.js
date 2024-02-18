@@ -4,7 +4,7 @@ function init() {
     var loginbtn = document.querySelector('.profile')
     var loginhvr = document.querySelector('.hvr');
     let products = document.querySelectorAll('.shop-card');
-    let btns = document.querySelectorAll('.filter > span');
+    let btns = document.querySelectorAll('.filter span');
     let searchnav = document.querySelector('.search-nav')
     let searchbox = document.querySelector('.search-nav > input')
     let total = 0;
@@ -33,18 +33,23 @@ function init() {
 
     function filterProduct() {
         function changeColor() {
-            btns.forEach(function (elem) {
-                elem.addEventListener('click', function () {
-                    elem.style.color = '#639fa5'
-                    btns.forEach(otherFilter => {
-                        if (otherFilter !== elem) {
-                            otherFilter.style.color = "";
-                        }
-                    })
+            btns.forEach((btn) =>{
+                btn.addEventListener('click',function(){
+                    if(btn.style.color != '#639fa5'){
+                        btn.style.color = "#639fa5";
+                        btns.forEach(otherElem =>{
+                            if(otherElem.textContent !== btn.textContent){
+                                otherElem.style.color = "#888"
+                            }
+                            else{
+                                otherElem.style.color = "#639fa5"
+                            }
+                        })
+                    }
                 })
             })
-
         }
+
         var removeHidden = () => {
             products.forEach(elem => {
                 if (elem.classList.contains('hidden')) {
@@ -52,14 +57,15 @@ function init() {
                 }
             })
         }
+
         function tshirtFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('tshirt')) {
                     elem.classList.add('hidden')
-                    document.querySelector("#tshirt").style.color = '#639fa5'
                 }
             })
         }
+
         function shirtFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('shirt')) {
@@ -67,6 +73,7 @@ function init() {
                 }
             })
         }
+
         function jacketFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('jacket')) {
@@ -74,6 +81,7 @@ function init() {
                 }
             })
         }
+
         function bottomwearFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('jeans')) {
@@ -81,6 +89,7 @@ function init() {
                 }
             })
         }
+
         function shoesFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('shoes')) {
@@ -88,6 +97,7 @@ function init() {
                 }
             })
         }
+
         function bagsFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('bags')) {
@@ -95,6 +105,7 @@ function init() {
                 }
             })
         }
+
         function accessoriesFilter() {
             products.forEach(elem => {
                 if (!elem.classList.contains('accessories')) {
@@ -102,6 +113,7 @@ function init() {
                 }
             })
         }
+
         function lowPrice() {
             products.forEach((e) => {
                 let p = e.querySelector('#price').innerHTML;
@@ -112,6 +124,7 @@ function init() {
                 }
             })
         }
+
         function midPrice() {
             products.forEach((e) => {
                 let p = e.querySelector('#price').innerHTML;
@@ -124,6 +137,7 @@ function init() {
                 }
             })
         }
+
         function highPrice() {
             products.forEach((e) => {
                 let p = e.querySelector('#price').innerHTML;
@@ -134,6 +148,7 @@ function init() {
                 }
             })
         }
+
 
 
 
@@ -298,11 +313,13 @@ function init() {
         openmenu.addEventListener('click', function () {
             menu.style.transform = 'translatex(0%)'
             main.style.opacity = '0.5'
-            nav.style.opacity = '0.5'
         })
         closemenu.addEventListener('click', function () {
             menu.style.transform = 'translatex(100%)'
-            nav.style.opacity = '1'
+            main.style.opacity = '1'
+        })
+        main.addEventListener('click',function(){
+            menu.style.transform = 'translatex(100%)'
             main.style.opacity = '1'
         })
 
@@ -319,6 +336,7 @@ function init() {
                 window.addEventListener('scroll',function(){
                         filterBar.style.left = '-100%'
                     })
+                
         })
         filterclose.addEventListener('click',function(){
             filterBar.style.left = '-100%'
