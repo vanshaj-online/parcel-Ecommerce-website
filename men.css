@@ -1621,9 +1621,12 @@ footer>div>div:first-child {
         flex-direction: column;
         width: 100%;
         margin-top: 2vh;
+        align-items: flex-start;
     }
 
-
+    #original{
+        justify-content: flex-start;
+    }
     .original>div {
         width: 100%;
     }

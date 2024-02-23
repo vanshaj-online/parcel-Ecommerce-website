@@ -48,17 +48,18 @@ function toggleMenu() {
     let openmenu = document.querySelector('[data-open-menu]')
     let closemenu = document.querySelector('[data-close-menu]')
     let menu = document.querySelector('.side-bar')
-    let nav = document.querySelector('nav')
     
 
     openmenu.addEventListener('click', function () {
         menu.style.transform = 'translatex(0%)'
         main.style.opacity = '0.5'
-        nav.style.opacity = '0.5'
     })
     closemenu.addEventListener('click', function () {
         menu.style.transform = 'translatex(100%)'
-        nav.style.opacity = '1'
+        main.style.opacity = '1'
+    })
+    main.addEventListener('click',function(){
+        menu.style.transform = 'translatex(100%)'
         main.style.opacity = '1'
     })
 

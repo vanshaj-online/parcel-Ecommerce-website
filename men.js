@@ -9,7 +9,6 @@ function init() {
     let searchbox = document.querySelector('.search-nav > input')
     let total = 0;
     let main = document.querySelector('main')
-    let nav = document.querySelector('nav')
 
 
 
