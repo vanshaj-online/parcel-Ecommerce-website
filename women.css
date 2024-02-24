@@ -372,7 +372,7 @@ main,
 }
 
 .product {
-    height: 28rem;
+    height: 32rem;
     width: 24rem;
     border-radius: 5px;
     background-color: rgb(246, 246, 255);
@@ -429,22 +429,23 @@ main,
 
 .categories {
     height: 22vw;
-    width: 100%;
-    padding: 0 8vh;
     display: flex;
     position: relative;
     align-items: center;
-    overflow-x: hidden;
+    z-index: 99;
+    padding: 0 3rem;
+    overflow-x: auto;
     justify-content: space-between;
 }
 
 .cat-prod {
     height: 15vw;
-    width: 13vw;
+    width: 20%;
     margin-right: 5vh;
     display: flex;
     align-items: center;
     flex: 0 0 auto;
+    z-index: 5;
     flex-direction: column;
     justify-content: space-around;
     mix-blend-mode: multiply;
@@ -717,6 +718,11 @@ footer>div>div:first-child {
     display: flex;
     justify-content: center;
     text-transform: capitalize;
+}
+
+
+.center-nav>li>ul>a{
+    color: #000;
 }
 
 /* footer section */
@@ -1663,3 +1669,76 @@ footer>div>div:first-child {
 }
 
 /* medium screen devices styling */
+
+/* large screen devices styling */
+
+@media screen and (740px < width < 1023px) {
+
+
+    :root {
+        --mid-font: clamp(1.5vw, 1.8vw, 2.5vw);
+        --small-font: clamp(1.3vw, 1.7vw, 2vw);
+        --xs-font: clamp(1.3vw, 1.5vw, 2.5vw);
+        --heading-font: clamp(30px, 35px, 45px)
+    }
+
+
+    header,
+    nav {
+        justify-content: space-between;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: max-content;
+        padding: 0;
+    }
+
+    .logo a {
+        font-size: clamp(2vw, 2.4vw, 3.5vw);
+    }
+
+    .center-nav li {
+        gap: 2rem;
+    }
+
+    .center-nav>li>ul>a {
+        font-size: var(--mid-font);
+    }
+
+    .search-nav {
+        width: max-content;
+    }
+
+    .search-nav input::placeholder {
+        padding: 0;
+        font-size: var(--small-font);
+    }
+
+    .cart {
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
+    .cart a img {
+        height: 2.9vw;
+    }
+
+
+    .heading h1,
+    .txt h1{
+        font-size: var(--heading-font);
+    }
+
+    .product{
+        max-width: 20rem;
+        width: 16rem;
+        height: 25rem;
+    }
+
+}
+
+    /* large screen devices styling */

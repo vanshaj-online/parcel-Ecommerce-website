@@ -9,7 +9,7 @@ function scroll(){
                 next.addEventListener('click', function () {
                     scroller.forEach(elem => {
                         elem.style.transition = '.2s linear'
-                        elem.style.transform = 'translateX(-120%)'
+                        elem.style.transform = `translateX(${-window.innerWidth/1.5+'px'})`
                     })
                     next.classList.remove('show')
                     prev.classList.add('show')
@@ -24,10 +24,10 @@ function scroll(){
             })
             prev.classList.remove('show')
             next.classList.add('show')
-            console.log('clicked')
         })
     })
     observer.observe(lastelem);
+
 }
 scroll()
 
@@ -35,8 +35,7 @@ scroll()
 function dropdownprofile() {
     var loginbtn = document.querySelector('.profile')
     var loginhvr = document.querySelector('.hvr')
-    loginbtn.addEventListener('mousemove', () => {
-        loginhvr.classList.add('active')
+    loginbtn.addEventListener('mousemove', () => {        loginhvr.classList.add('active')
     })
     loginbtn.addEventListener('mouseleave', () => {
         loginhvr.classList.remove('active')
