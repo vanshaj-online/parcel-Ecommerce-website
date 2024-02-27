@@ -307,9 +307,11 @@ main {
 }
 
 .main {
-    height: 90vh;
+    height: 90dvh;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .right,
@@ -731,7 +733,7 @@ form button:hover {
 
     header,
     nav {
-        min-height: 100px;
+        max-height: 60px;
         width: 100%;
         display: grid;
         box-shadow: none;
