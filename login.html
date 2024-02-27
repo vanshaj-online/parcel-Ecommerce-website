@@ -10,22 +10,32 @@
     <script src="login.js" defer></script>
 </head>
 
-<body style="position:relative">
+<body style="position: relative;">
     <div class="side-bar">
         <div class="closebtn">
             <img src="./assets/menu-close.svg" data-close-menu class="" alt="">
         </div>
         <div class="menu">
             <div id="logo">
-                <h3>parcel</h3>
+                <a href="index.html">parcel</a>
             </div>
             <a href="men.html">men</a>
             <a href="women.html">women</a>
             <a href="#">accessories</a>
             <a href="#">cart</a>
             <a href="login.html">Account</a>
+            <h3>shop by category</h3>
+            <a href="">eyewear</a>
+            <a href="">casual wear</a>
+            <a href="">western wear</a>
+            <a href="">watches</a>
+            <a href="">office wear</a>
+            <a href="">bags</a>
+            <a href="">Formals</a>
+            <a href="">footwears</a>
         </div>
     </div>
+    <span class="loader black"></span>
     <header>
         <nav>
             <div class="logo">
@@ -33,8 +43,8 @@
             </div>
             <div class="center-nav">
                 <li>
-                    <ul class="hover">
-                        <a href="#home">home</a>
+                    <ul class="hover ">
+                        <a href="index.html">home</a>
                     </ul>
                     <ul class="hover">
                         <a href="men.html">Men</a>
@@ -47,26 +57,25 @@
                     </ul>
                 </li>
             </div>
+            <div class="right-nav">
+                <div class="btn">
+                    <img src="./assets/menu-open.svg" data-open-menu alt="">
+                </div>
+            </div>
             <div class="cart">
                 <div id="profile">
-                    <a href="login.html" class="profile"><img loading="lazy" src="assets/login.svg" alt=""></a>
+                    <a href="assets/login.html" class="profile"><img loading="lazy" src="assets/login.svg" alt=""></a>
                     <li data-profile class="hvr ">
-                        <ul><a href="login.html">login/signup</a></ul>
+                        <ul><a href="assets/login.html">login/signup</a></ul>
                         <ul><a href="">orders</a></ul>
                         <ul><a href="">contact us</a></ul>
                         <ul><a href="">profile</a></ul>
                         <ul><a href="">profile</a></ul>
                     </li>
                 </div>
-                <a href="" target="_blank" id="cart">
-                    <img loading="lazy" src="assets/cart.svg" alt="cart">
-                </a>
+                <a href="" target=""><img loading="lazy" src="assets/cart.svg" alt="cart"></a>
             </div>
-            <div class="right-nav">
-                <div class="btn">
-                    <img src="./assets/menu-open.svg" data-open-menu alt="">
-                </div>
-            </div>
+            
         </nav>
     </header>
     <main>
@@ -100,7 +109,7 @@
                                     <input type="text" placeholder="First name" required><input type="text" placeholder="Last name">
                                 </div>
                                 <input type="email" placeholder="email iD" required>
-                                <input type="tel" placeholder="Phone" required>
+                                <input type="tel" placeholder="Phone (optional)">
                                 <input type="password" placeholder="Password" required>
                                 <button>
                                     Sign up

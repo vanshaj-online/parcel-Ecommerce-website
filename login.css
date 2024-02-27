@@ -707,7 +707,7 @@ form button:hover {
 
 /* 320px < width < 425px */
 
-@media screen and (319px < width < 426px) {
+@media screen and (299px < width < 426px) {
     
     .login .warn{
         visibility: hidden;
@@ -730,56 +730,76 @@ form button:hover {
     /* header & navbar section */
 
     header,
-    nav{
-        height: 60px;
+    nav {
+        min-height: 100px;
         width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        justify-content: space-between;
+        display: grid;
         box-shadow: none;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    nav {
+        padding: 5px;
+        gap: 2rem;
+    }
+
+    .search-nav {
+        grid-column: span 2;
+        width: auto;
+    }
+
+    .search-nav input {
+        height: 100%;
+        width: 90%;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    nav>div {
+        width: 50%;
     }
 
     .center-nav,
-    .cart{
+    .cart {
         display: none;
     }
 
-    .logo{
-        height: 50%;
-        width: 40%;
+    .logo {
+        height: 100%;
+        width: 60%;
     }
 
-    .logo a{
-        font-size: clamp(1rem, 1.4rem, 2.5rem);
+    .logo a {
+        font-size: clamp(12px, 15px, 20px);
         background-color: transparent;
         color: #74bac0;
     }
 
-    .right-nav{
-        width: 20%;
+    .right-nav {
+        width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
-    .btn{
+    .btn {
         height: 100%;
-        width: 100%;
+        width: 20%;
         position: relative;
     }
-    
-    .btn img{
+
+    .btn img {
         height: 50%;
         object-fit: contain;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
-    .side-bar{
+    .side-bar {
         height: 110dvh;
         width: 67%;
         position: fixed;
@@ -795,7 +815,7 @@ form button:hover {
         transition: .15s linear all;
     }
 
-    .closebtn{
+    .closebtn {
         height: 60px;
         width: 30%;
         position: absolute;
@@ -806,20 +826,21 @@ form button:hover {
         align-items: center;
     }
 
-    .closebtn img{
+    .closebtn img {
         height: 50%;
     }
 
-    .menu{
+    .menu {
         width: 90%;
         height: 90%;
         display: flex;
         flex-direction: column;
         padding: 3vh;
         gap: 2rem;
+        overflow: scroll;
     }
 
-    .menu a{
+    .menu a {
         text-decoration: none;
         color: #555;
         font-size: clamp(2vw, 4.0vw, 5vw);
@@ -828,8 +849,8 @@ form button:hover {
         font-weight: 100;
         font-family: "Poppins", montserrat;
     }
-    
-    .menu h3{
+
+    .menu h3 {
         text-transform: uppercase;
         font-family: "Poppins", montserrat;
         font-weight: 800;
@@ -837,22 +858,22 @@ form button:hover {
         font-size: clamp(3vw, 4.6vw, 5vw);
     }
 
-    #logo{
+    #logo {
         width: 100%;
         display: flex;
         margin: 1vh 0;
         justify-content: center;
     }
 
-    #logo h3{
+    #logo a {
         font-family: 'righteous', gilroy;
         font-size: clamp(6vw, 7vw, 8.5vw);
         background-color: #74bac0;
         color: white;
         padding: 0 5px;
+        text-transform: uppercase;
         letter-spacing: 2px;
     }
-
 
 
     /* header & navbar section */
@@ -1005,7 +1026,7 @@ form button:hover {
 
     .side-bar{
         height: 110dvh;
-        width: 67%;
+        width: 55%;
         position: fixed;
         z-index: 10;
         top: 0;
@@ -1040,40 +1061,42 @@ form button:hover {
         display: flex;
         flex-direction: column;
         padding: 3vh;
+        overflow: scroll;
         gap: 2rem;
     }
 
-    .menu a{
+    .menu a {
         text-decoration: none;
         color: #555;
-        font-size: clamp(2vw, 4.0vw, 5vw);
+        font-size: clamp(2vw, 3.0vw, 4vw);
         letter-spacing: -0.5px;
         text-transform: capitalize;
         font-weight: 100;
         font-family: "Poppins", montserrat;
     }
-    
-    .menu h3{
+
+    .menu h3 {
         text-transform: uppercase;
         font-family: "Poppins", montserrat;
         font-weight: 800;
         color: black;
-        font-size: clamp(3vw, 4.6vw, 5vw);
+        font-size: clamp(2vw, 3.5vw, 5vw);
     }
 
-    #logo{
+    #logo {
         width: 100%;
         display: flex;
         margin: 1vh 0;
         justify-content: center;
     }
 
-    #logo h3{
+    #logo a {
         font-family: 'righteous', gilroy;
-        font-size: clamp(6vw, 7vw, 8.5vw);
+        font-size: clamp(4vw, 5vw, 6.5vw);
         background-color: #74bac0;
         color: white;
         padding: 0 5px;
+        text-transform: uppercase;
         letter-spacing: 2px;
     }
 
@@ -1155,3 +1178,355 @@ form button:hover {
 
 
 /* 426px < width < 600px */
+
+
+/* 600px < width < 750px */
+
+@media screen and (600px < width < 751px) {
+    
+    .login .warn{
+        visibility: hidden;
+    }
+    
+    *{
+        user-select: none;
+    }
+    
+    .hide{
+        display: none;
+    }
+    
+    
+    html,
+    body{
+        height: 100dvh;
+    }
+
+    /* header & navbar section */
+
+    header,
+    nav{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    .center-nav,
+    .cart{
+        display: none;
+    }
+
+    .logo{
+        height: 50%;
+        width: 40%;
+    }
+
+    .logo a{
+        font-size: clamp(1rem, 1.4rem, 2.5rem);
+        background-color: transparent;
+        color: #74bac0;
+    }
+
+    .right-nav{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    
+    .btn img{
+        height: 50%;
+        object-fit: contain;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .side-bar{
+        height: 110dvh;
+        width: 45%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: -2px 14px 12px 8px rgba(128, 128, 128, 0.224);
+        transform: translateX(100%);
+        transition: .15s linear all;
+    }
+
+    .closebtn{
+        height: 60px;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .closebtn img{
+        height: 50%;
+    }
+
+    .menu{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 3vh;
+        overflow: scroll;
+        gap: 2rem;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #555;
+        font-size: clamp(14px, 1.1rem, 20px);
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        font-weight: 100;
+        font-family: "Poppins", montserrat;
+    }
+
+    .menu h3 {
+        text-transform: uppercase;
+        font-family: "Poppins", montserrat;
+        font-weight: 800;
+        color: black;
+        font-size: clamp(15px, 1.2rem, 25px);
+    }
+
+    #logo {
+        width: 100%;
+        display: flex;
+        margin: 1vh 0;
+        justify-content: center;
+    }
+
+    #logo a {
+        font-family: 'righteous', gilroy;
+        font-size: clamp(18px, 1.5rem, 25px);
+        background-color: #74bac0;
+        color: white;
+        padding: 0 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+
+
+    /* header & navbar section */
+
+    /* main styling */
+
+    .main .left{
+        display: none;        
+    }
+
+    .right{
+        width: 100%;
+        height: 100%;
+    }
+
+    .right .border{
+        min-height: 75%;
+        max-width: 350px;
+        width: 80%;
+    }
+
+    .login>form{
+        padding: 0;
+    }
+
+    .form .logo{
+        font-size: clamp(20px, 28px, 35px);
+        margin: 0;
+    }
+
+    .login>form>input,
+    .signup form input{
+        font-size: min(4vw, 15px);
+    }
+    
+    .login>form>input::placeholder{
+        font-weight: 100;
+    }
+
+    .login>form>#forget a{
+        font-size: min(3.8vw, 16px);
+    }
+    
+    form button,
+    .signup button{
+        width: auto;
+        height: auto;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: min(3.5vw,15px);
+    }
+    
+    #new span,
+    #new span a,
+    .signup form>div:last-of-type>span{
+        font-size: min(3vw, 16px);
+        width: max-content;
+        display: flex;
+        gap: 5px;
+        white-space: nowrap;
+        align-items: center;
+    }
+    
+    .signup>form{
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+    .signup form input{
+        padding: 3px;
+    }
+
+}
+
+/* 600px < width < 751px */
+
+/* 750 < width < 1023px */
+
+@media screen and (750px < width < 1023px) {
+
+    :root {
+        --mid-font: clamp(1.5vw, 1.8vw, 2.5vw);
+        --small-font: clamp(1.3vw, 1.7vw, 2vw);
+        --xs-font: clamp(1.3vw, 1.5vw, 2.5vw);
+    }
+
+
+    header,
+    nav {
+        justify-content: space-between;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: max-content;
+        padding: 0;
+    }
+
+    .logo a {
+        font-size: clamp(2vw, 2.4vw, 3.5vw);
+    }
+
+    .center-nav li {
+        gap: 2rem;
+    }
+
+    .center-nav>li>ul>a {
+        font-size: var(--mid-font);
+    }
+
+    .search-nav {
+        width: max-content;
+    }
+
+    .search-nav input::placeholder {
+        padding: 0;
+        font-size: var(--small-font);
+    }
+
+    .cart {
+        padding: 0;
+        gap: 0;
+    }
+
+    .cart a img {
+        height: 2.9vw;
+    }
+
+    .right .border{
+        width: 70%;
+        min-height: 25rem;
+        height: 43vw;
+    }
+
+    .form .logo{
+        font-size: 2.5vw;
+    }
+
+    .login>form{
+        padding: 0;
+        gap: 0.1rem;
+    }
+
+
+    .login>form>input,
+    .signup form input{
+        font-size: clamp(13px, 1.7vw, 18px);
+    }
+    
+    .login>form>input::placeholder{
+        font-weight: 100;
+    }
+
+    .login>form>#forget a{
+        font-size: clamp(13px, 1.8vw, 18px);
+    }
+    
+    form button,
+    .signup button{
+        width: auto;
+        height: auto;
+        padding: 7px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: min(3.5vw,15px);
+    }
+    
+    #new span,
+    #new span a,
+    .signup form>div:last-of-type>span{
+        font-size: clamp(13px, 1.8vw, 18px);
+        width: max-content;
+        display: flex;
+        gap: 5px;
+        white-space: nowrap;
+        align-items: center;
+    }
+    
+    .signup>form{
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+    .signup form input{
+        padding: 3px;
+    }
+
+    .signup form > *{
+        margin-bottom: 0;
+    }
+
+}
+
+/* 750 < width < 1023px */
